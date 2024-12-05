@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "seasonaladditions",
+	"version": "${version}",
+	"name": "Seasonal Additions",
+	"description": "Some seasonal additions for your Minecraft world.",
+	"authors": [
+		"TheBlindBandit6"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/seasonaladditions/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.theblindbandit6.seasonaladditions.SeasonalAdditions"
+		],
+		"client": [
+			"net.theblindbandit6.seasonaladditions.SeasonalAdditionsClient"
+		],
+		"fabric-datagen": [
+			"net.theblindbandit6.seasonaladditions.SeasonalAdditionsDataGenerator"
+		]
+	},
+	"mixins": [
+		"seasonaladditions.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
