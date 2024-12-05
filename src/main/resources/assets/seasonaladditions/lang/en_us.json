@@ -1,0 +1,11 @@
+{
+  "item.seasonaladditions.frosted_glowstone_dust": "Frosted Glowstone Dust",
+
+  "block.seasonaladditions.frosted_glowstone": "Frosted Glowstone",
+
+  "item.minecraft.potion.effect.frosted_potion": "Frosted Potion",
+  "item.minecraft.splash_potion.effect.frosted_potion": "Frosted Splash Potion",
+  "item.minecraft.lingering_potion.effect.frosted_potion": "Frosted Lingering Potion",
+
+  "itemgroup.winteradditions": "Winter Additions"
+}

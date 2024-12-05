@@ -11,13 +11,15 @@ import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
 
 public class ModItemGroups {
-    public static final ItemGroup SEASONAL_ADDITIONS_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(SeasonalAdditions.MOD_ID, "seasonaladditions"),
+    public static final ItemGroup WINTER_ADDITIONS_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(SeasonalAdditions.MOD_ID, "winteradditions"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.FROSTED_GLOWSTONE_DUST))
-                    .displayName(Text.translatable("itemgroup.seasonaladditions"))
+                    .displayName(Text.translatable("itemgroup.winteradditions"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.FROSTED_GLOWSTONE_DUST);
                         entries.add(ModBlocks.FROSTED_GLOWSTONE);
+
+                        entries.add(ModBlocks.ICECUTTER);
 
                     }).build());
 

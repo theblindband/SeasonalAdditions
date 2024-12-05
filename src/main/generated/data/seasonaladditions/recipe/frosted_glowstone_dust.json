@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "minecraft:packed_ice",
+    "R": "minecraft:glowstone_dust"
+  },
+  "pattern": [
+    "RRR",
+    "RGR",
+    "RRR"
+  ],
+  "result": {
+    "count": 8,
+    "id": "seasonaladditions:frosted_glowstone_dust"
+  }
+}

@@ -11,6 +11,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
+import net.theblindbandit6.seasonaladditions.block.custom.IcecutterBlock;
 
 public class ModBlocks {
     //Mod Blocks
@@ -21,7 +22,15 @@ public class ModBlocks {
                     .strength(0.3F)
                     .sounds(BlockSoundGroup.GLASS)
                     .luminance(state -> 15)
-                    .solidBlock(Blocks::never)));
+                    .solidBlock(Blocks::never)
+                    .slipperiness(0.98F)));
+    //Icecutter
+    public static final Block ICECUTTER = registerBlock("icecutter",
+            new IcecutterBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "icecutter")))
+                    .mapColor(MapColor.STONE_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(3.5F)
+                    .requiresTool()));
 
     //Block Register Methods
     private static Block registerBlock(String name, Block block) {

@@ -1,0 +1,6 @@
+// 1.21.4	2024-12-05T21:27:16.5730358	Seasonal Additions/Model Definitions
+46bc437af807652222a1d2a8730f88880789575d assets\seasonaladditions\models\block\frosted_glowstone.json
+92db6d40fb860d7f7d5301c70cf45b06f94668f5 assets\seasonaladditions\items\frosted_glowstone.json
+3d3fbbf77be131a1241ce5ea9c96e3bd32a7fc12 assets\seasonaladditions\items\frosted_glowstone_dust.json
+356f2f900820af4d7aad0152bea0f451069ab102 assets\seasonaladditions\models\item\frosted_glowstone_dust.json
+73249e50d3a2051df5cda28d4726c7f9593b3413 assets\seasonaladditions\blockstates\frosted_glowstone.json
