@@ -2,7 +2,9 @@ package net.theblindbandit6.seasonaladditions.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Items;
@@ -47,8 +49,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Blocks.PACKED_ICE), conditionsFromItem(Blocks.PACKED_ICE))
                         .offerTo(exporter);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS, Blocks.PACKED_ICE, 4);
+                //Small Ice Bricks
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS, Blocks.PACKED_ICE, 1);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS_SLAB, ModBlocks.SMALL_ICE_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS_STAIRS, ModBlocks.SMALL_ICE_BRICKS, 1);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS_WALL, ModBlocks.SMALL_ICE_BRICKS, 1);
+                //Large Ice Bricks
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LARGE_ICE_BRICKS, Blocks.PACKED_ICE, 4);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LARGE_ICE_BRICKS_SLAB, ModBlocks.LARGE_ICE_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LARGE_ICE_BRICKS_STAIRS, ModBlocks.LARGE_ICE_BRICKS, 1);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LARGE_ICE_BRICKS_WALL, ModBlocks.LARGE_ICE_BRICKS, 1);
+                //Polished Ice
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ICE, Blocks.PACKED_ICE, 4);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.PACKED_ICE, Blocks.BLUE_ICE, 9);
@@ -61,4 +72,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public String getName() {
         return "Seasonal Additions Recipes";
     }
+
+
 }

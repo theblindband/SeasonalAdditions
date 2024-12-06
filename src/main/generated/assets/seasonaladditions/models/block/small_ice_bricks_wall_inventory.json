@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "seasonaladditions:block/small_ice_bricks"
+  }
+}

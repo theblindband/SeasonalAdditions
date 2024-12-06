@@ -26,10 +26,21 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        //Icecutter
         addDrop(ModBlocks.ICECUTTER);
+        //Small Ice Bricks
         addDrop(ModBlocks.SMALL_ICE_BRICKS);
+        addDrop(ModBlocks.SMALL_ICE_BRICKS_SLAB);
+        addDrop(ModBlocks.SMALL_ICE_BRICKS_STAIRS);
+        addDrop(ModBlocks.SMALL_ICE_BRICKS_WALL);
+        //Large Ice Bricks
         addDrop(ModBlocks.LARGE_ICE_BRICKS);
+        addDrop(ModBlocks.LARGE_ICE_BRICKS_SLAB);
+        addDrop(ModBlocks.LARGE_ICE_BRICKS_STAIRS);
+        addDrop(ModBlocks.LARGE_ICE_BRICKS_WALL);
+        //Polished Ice
         addDrop(ModBlocks.POLISHED_ICE);
+        //Frosted Glowstone
         addDrop(ModBlocks.FROSTED_GLOWSTONE, multipleOreDrops(ModBlocks.FROSTED_GLOWSTONE, ModItems.FROSTED_GLOWSTONE_DUST, 1, 4));
     }
 

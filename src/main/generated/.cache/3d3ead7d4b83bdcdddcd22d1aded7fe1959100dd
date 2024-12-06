@@ -1,2 +1,5 @@
-// 1.21.4	2024-12-06T01:49:23.8365017	Seasonal Additions/Tags for minecraft:block
-493a5d1a38bd8fea81f86a5d9d16191394a532e8 data\minecraft\tags\block\mineable\pickaxe.json
+// 1.21.4	2024-12-06T15:06:40.4244601	Seasonal Additions/Tags for minecraft:block
+8bcb17b9265a38182011557a183575475a76ce21 data\minecraft\tags\block\stairs.json
+e6acaa51b83727892b4fe82db43dbfcacdbc6deb data\minecraft\tags\block\mineable\pickaxe.json
+e391787add743d07c239fa5f617c913da159e550 data\minecraft\tags\block\slabs.json
+395f6b428f7d1639f85bd3272071040a3d2fb257 data\minecraft\tags\block\walls.json

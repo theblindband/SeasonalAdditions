@@ -18,9 +18,17 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         //Icecutter
                         entries.add(ModBlocks.ICECUTTER);
-                        //Icecutter Blocks
+                        //Small Ice Bricks
                         entries.add(ModBlocks.SMALL_ICE_BRICKS);
+                        entries.add(ModBlocks.SMALL_ICE_BRICKS_SLAB);
+                        entries.add(ModBlocks.SMALL_ICE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.SMALL_ICE_BRICKS_WALL);
+                        //Large Ice Bricks
                         entries.add(ModBlocks.LARGE_ICE_BRICKS);
+                        entries.add(ModBlocks.LARGE_ICE_BRICKS_SLAB);
+                        entries.add(ModBlocks.LARGE_ICE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.LARGE_ICE_BRICKS_WALL);
+                        //Polished Ice
                         entries.add(ModBlocks.POLISHED_ICE);
                         //Frosted Glowstone
                         entries.add(ModItems.FROSTED_GLOWSTONE_DUST);

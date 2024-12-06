@@ -19,20 +19,42 @@ public class ModBlocks {
     public static final Block ICECUTTER = registerBlock("icecutter",
             new IcecutterBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "icecutter")))
                     .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).strength(3.5F).requiresTool()));
-    //Icecutter Blocks
+    //Small Ice Bricks
     public static final Block SMALL_ICE_BRICKS = registerBlock("small_ice_bricks",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "small_ice_bricks")))
                     .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block SMALL_ICE_BRICKS_SLAB = registerBlock("small_ice_bricks_slab",
+            new SlabBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "small_ice_bricks_slab")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block SMALL_ICE_BRICKS_STAIRS = registerBlock("small_ice_bricks_stairs",
+            new StairsBlock(SMALL_ICE_BRICKS.getDefaultState(), AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "small_ice_bricks_stairs")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block SMALL_ICE_BRICKS_WALL = registerBlock("small_ice_bricks_wall",
+            new WallBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "small_ice_bricks_wall")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    //Large Ice Bricks
     public static final Block LARGE_ICE_BRICKS = registerBlock("large_ice_bricks",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "large_ice_bricks")))
                     .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block LARGE_ICE_BRICKS_SLAB = registerBlock("large_ice_bricks_slab",
+            new SlabBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "large_ice_bricks_slab")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block LARGE_ICE_BRICKS_STAIRS = registerBlock("large_ice_bricks_stairs",
+            new StairsBlock(LARGE_ICE_BRICKS.getDefaultState(), AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "large_ice_bricks_stairs")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block LARGE_ICE_BRICKS_WALL = registerBlock("large_ice_bricks_wall",
+            new WallBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "large_ice_bricks_wall")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    //Polished Ice
     public static final Block POLISHED_ICE = registerBlock("polished_ice",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "polished_ice")))
                     .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+
     //Icecutter blocks to add:
     //Slab, Stair and Wall variants for existing ice and modded variants.
     //Blue Ice Variants
     //Tiles and Chisled Variants
+
     //Frosted Glowstone
     public static final Block FROSTED_GLOWSTONE = registerBlock("frosted_glowstone",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "frosted_glowstone")))

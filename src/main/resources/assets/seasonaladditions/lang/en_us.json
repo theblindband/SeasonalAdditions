@@ -2,9 +2,18 @@
   "itemgroup.winteradditions": "Seasonal Additions - Winter",
 
   "block.seasonaladditions.icecutter": "Icecutter",
+  "container.icecutter": "Icecutter",
 
   "block.seasonaladditions.small_ice_bricks": "Small Ice Bricks",
+  "block.seasonaladditions.small_ice_bricks_slab": "Small Ice Bricks Slab",
+  "block.seasonaladditions.small_ice_bricks_stairs": "Small Ice Bricks Stairs",
+  "block.seasonaladditions.small_ice_bricks_wall": "Small Ice Bricks Wall",
+
   "block.seasonaladditions.large_ice_bricks": "Large Ice Bricks",
+  "block.seasonaladditions.large_ice_bricks_slab": "Large Ice Bricks Slab",
+  "block.seasonaladditions.large_ice_bricks_stairs": "Large Ice Bricks Stairs",
+  "block.seasonaladditions.large_ice_bricks_wall": "Large Ice Bricks Wall",
+
   "block.seasonaladditions.polished_ice": "Polished Ice",
 
   "block.seasonaladditions.frosted_glowstone": "Frosted Glowstone",
@@ -12,7 +21,5 @@
 
   "item.minecraft.potion.effect.frosted_potion": "Frosted Potion",
   "item.minecraft.splash_potion.effect.frosted_potion": "Frosted Splash Potion",
-  "item.minecraft.lingering_potion.effect.frosted_potion": "Frosted Lingering Potion",
-
-  "container.icecutter": "Icecutter"
+  "item.minecraft.lingering_potion.effect.frosted_potion": "Frosted Lingering Potion"
 }

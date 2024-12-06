@@ -2,7 +2,13 @@
   "values": [
     "seasonaladditions:icecutter",
     "seasonaladditions:small_ice_bricks",
+    "seasonaladditions:small_ice_bricks_slab",
+    "seasonaladditions:small_ice_bricks_stairs",
+    "seasonaladditions:small_ice_bricks_wall",
     "seasonaladditions:large_ice_bricks",
+    "seasonaladditions:large_ice_bricks_slab",
+    "seasonaladditions:large_ice_bricks_stairs",
+    "seasonaladditions:large_ice_bricks_wall",
     "seasonaladditions:polished_ice",
     "seasonaladditions:frosted_glowstone"
   ]

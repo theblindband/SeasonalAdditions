@@ -1,6 +1,12 @@
-// 1.21.4	2024-12-06T01:49:23.8354989	Seasonal Additions/Block Loot Tables
+// 1.21.4	2024-12-06T15:06:40.4224612	Seasonal Additions/Block Loot Tables
+90d259dc6af99fb06c6e76cd99ad4cf5c4fb7104 data\seasonaladditions\loot_table\blocks\small_ice_bricks_stairs.json
+a62c4981f9047e33da4d89e7dd8f726881491331 data\seasonaladditions\loot_table\blocks\large_ice_bricks_stairs.json
 03ee26987f4f13298b2ba69603cd510e0df921e4 data\seasonaladditions\loot_table\blocks\polished_ice.json
+5114d93caa319d1499a70123e6cfde305efc7562 data\seasonaladditions\loot_table\blocks\small_ice_bricks_slab.json
 f4c4f369ff93936402e4722db2989655880131e3 data\seasonaladditions\loot_table\blocks\small_ice_bricks.json
 810c23d111b962060b25dbcfc39a4d235364d8e2 data\seasonaladditions\loot_table\blocks\icecutter.json
+61aa3622bf3f09fc6e767d7da9ec3cc3e50c7045 data\seasonaladditions\loot_table\blocks\large_ice_bricks_slab.json
 eaa68ff964337d62300bbe9b31267a1215864b0f data\seasonaladditions\loot_table\blocks\frosted_glowstone.json
 7db2b8773352ede12190e6567278e9164c7c3e41 data\seasonaladditions\loot_table\blocks\large_ice_bricks.json
+4e098bb4ec5a82861648f42d1fbdebf27a6469fa data\seasonaladditions\loot_table\blocks\large_ice_bricks_wall.json
+ea6a29bd1b55f0ba3f3d6d77083e3af01516760d data\seasonaladditions\loot_table\blocks\small_ice_bricks_wall.json

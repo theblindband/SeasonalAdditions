@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "seasonaladditions:block/small_ice_bricks_slab"
+    },
+    "type=double": {
+      "model": "seasonaladditions:block/small_ice_bricks"
+    },
+    "type=top": {
+      "model": "seasonaladditions:block/small_ice_bricks_slab_top"
+    }
+  }
+}

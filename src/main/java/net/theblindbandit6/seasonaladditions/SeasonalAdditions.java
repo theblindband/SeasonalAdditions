@@ -25,7 +25,6 @@ public class SeasonalAdditions implements ModInitializer {
 		LOGGER.info("Initializing Seasonal Additions.");
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-
 		ModItemGroups.registerItemGroups();
 		ModPotions.registerPotions();
 
@@ -33,7 +32,5 @@ public class SeasonalAdditions implements ModInitializer {
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.FROSTED_GLOWSTONE_DUST, ModPotions.FROSTED_POTION);
 		});
-
-
 	}
 }
