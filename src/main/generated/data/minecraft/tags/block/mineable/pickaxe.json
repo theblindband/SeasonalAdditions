@@ -1,5 +1,9 @@
 {
   "values": [
+    "seasonaladditions:icecutter",
+    "seasonaladditions:small_ice_bricks",
+    "seasonaladditions:large_ice_bricks",
+    "seasonaladditions:polished_ice",
     "seasonaladditions:frosted_glowstone"
   ]
 }

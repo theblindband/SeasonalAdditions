@@ -1,11 +1,18 @@
 {
-  "item.seasonaladditions.frosted_glowstone_dust": "Frosted Glowstone Dust",
+  "itemgroup.winteradditions": "Seasonal Additions - Winter",
+
+  "block.seasonaladditions.icecutter": "Icecutter",
+
+  "block.seasonaladditions.small_ice_bricks": "Small Ice Bricks",
+  "block.seasonaladditions.large_ice_bricks": "Large Ice Bricks",
+  "block.seasonaladditions.polished_ice": "Polished Ice",
 
   "block.seasonaladditions.frosted_glowstone": "Frosted Glowstone",
+  "item.seasonaladditions.frosted_glowstone_dust": "Frosted Glowstone Dust",
 
   "item.minecraft.potion.effect.frosted_potion": "Frosted Potion",
   "item.minecraft.splash_potion.effect.frosted_potion": "Frosted Splash Potion",
   "item.minecraft.lingering_potion.effect.frosted_potion": "Frosted Lingering Potion",
 
-  "itemgroup.winteradditions": "Winter Additions"
+  "container.icecutter": "Icecutter"
 }

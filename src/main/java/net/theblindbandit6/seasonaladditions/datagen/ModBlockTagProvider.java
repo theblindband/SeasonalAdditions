@@ -16,6 +16,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.ICECUTTER)
+                .add(ModBlocks.SMALL_ICE_BRICKS)
+                .add(ModBlocks.LARGE_ICE_BRICKS)
+                .add(ModBlocks.POLISHED_ICE)
                 .add(ModBlocks.FROSTED_GLOWSTONE);
     }
 }

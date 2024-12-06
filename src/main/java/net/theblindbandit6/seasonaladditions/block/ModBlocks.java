@@ -14,23 +14,36 @@ import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
 import net.theblindbandit6.seasonaladditions.block.custom.IcecutterBlock;
 
 public class ModBlocks {
-    //Mod Blocks
-    public static final Block FROSTED_GLOWSTONE = registerBlock("frosted_glowstone",
-            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "frosted_glowstone")))
-                    .mapColor(MapColor.LIGHT_BLUE_GRAY)
-                    .instrument(NoteBlockInstrument.PLING)
-                    .strength(0.3F)
-                    .sounds(BlockSoundGroup.GLASS)
-                    .luminance(state -> 15)
-                    .solidBlock(Blocks::never)
-                    .slipperiness(0.98F)));
+    //Winter Blocks
     //Icecutter
     public static final Block ICECUTTER = registerBlock("icecutter",
             new IcecutterBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "icecutter")))
-                    .mapColor(MapColor.STONE_GRAY)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .strength(3.5F)
-                    .requiresTool()));
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).strength(3.5F).requiresTool()));
+    //Icecutter Blocks
+    public static final Block SMALL_ICE_BRICKS = registerBlock("small_ice_bricks",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "small_ice_bricks")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block LARGE_ICE_BRICKS = registerBlock("large_ice_bricks",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "large_ice_bricks")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    public static final Block POLISHED_ICE = registerBlock("polished_ice",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "polished_ice")))
+                    .mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
+    //Icecutter blocks to add:
+    //Slab, Stair and Wall variants for existing ice and modded variants.
+    //Blue Ice Variants
+    //Tiles and Chisled Variants
+    //Frosted Glowstone
+    public static final Block FROSTED_GLOWSTONE = registerBlock("frosted_glowstone",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SeasonalAdditions.MOD_ID, "frosted_glowstone")))
+                    .mapColor(MapColor.LIGHT_BLUE_GRAY).instrument(NoteBlockInstrument.PLING).strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance(state -> 15).solidBlock(Blocks::never).slipperiness(0.98F)));
+    //Additional Winter themed blocks:
+    //Candy cane blocks
+    //Snow Blocks
+    //Baubles
+    //Fairy Lights
+    //Snowglobe
+    //Presents
 
     //Block Register Methods
     private static Block registerBlock(String name, Block block) {

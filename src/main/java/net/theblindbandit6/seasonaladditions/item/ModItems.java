@@ -10,8 +10,15 @@ import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
 
 public class ModItems {
     //Mod Items
+    //Winter Items
+    //Frosted Glowstone Dust
     public static final Item FROSTED_GLOWSTONE_DUST=registerItem("frosted_glowstone_dust",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SeasonalAdditions.MOD_ID,"frosted_glowstone_dust")))));
+    //Additional Items:
+    //Candy Cane
+    //Gingerbread
+    //Santa and Elf Hats
+    //Marshmallows
 
     //Item Register Methods
     private static Item registerItem(String name, Item item) {

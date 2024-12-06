@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "seasonaladditions:block/icecutter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "seasonaladditions:block/icecutter"
+    },
+    "facing=south": {
+      "model": "seasonaladditions:block/icecutter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "seasonaladditions:block/icecutter",
+      "y": 270
+    }
+  }
+}

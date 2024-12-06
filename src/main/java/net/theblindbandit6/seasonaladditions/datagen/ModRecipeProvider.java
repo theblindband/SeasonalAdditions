@@ -23,6 +23,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
             @Override
             public void generate() {
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICECUTTER)
+                    .pattern(" R ")
+                    .pattern("RSR")
+                    .input('R', Blocks.PACKED_ICE)
+                    .input('S', Blocks.STONECUTTER)
+                    .criterion(hasItem(Blocks.PACKED_ICE), conditionsFromItem(Blocks.PACKED_ICE))
+                    .offerTo(exporter);
+
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROSTED_GLOWSTONE)
                         .pattern("RR")
                         .pattern("RR")
@@ -38,6 +46,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('R', Items.GLOWSTONE_DUST)
                         .criterion(hasItem(Blocks.PACKED_ICE), conditionsFromItem(Blocks.PACKED_ICE))
                         .offerTo(exporter);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS, Blocks.PACKED_ICE, 4);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LARGE_ICE_BRICKS, Blocks.PACKED_ICE, 4);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ICE, Blocks.PACKED_ICE, 4);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.PACKED_ICE, Blocks.BLUE_ICE, 9);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.ICE, Blocks.PACKED_ICE, 9);
             }
         };
     }

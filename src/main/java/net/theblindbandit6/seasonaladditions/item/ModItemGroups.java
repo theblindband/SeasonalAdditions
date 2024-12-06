@@ -13,13 +13,18 @@ import net.theblindbandit6.seasonaladditions.block.ModBlocks;
 public class ModItemGroups {
     public static final ItemGroup WINTER_ADDITIONS_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(SeasonalAdditions.MOD_ID, "winteradditions"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.FROSTED_GLOWSTONE_DUST))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.ICECUTTER))
                     .displayName(Text.translatable("itemgroup.winteradditions"))
                     .entries((displayContext, entries) -> {
+                        //Icecutter
+                        entries.add(ModBlocks.ICECUTTER);
+                        //Icecutter Blocks
+                        entries.add(ModBlocks.SMALL_ICE_BRICKS);
+                        entries.add(ModBlocks.LARGE_ICE_BRICKS);
+                        entries.add(ModBlocks.POLISHED_ICE);
+                        //Frosted Glowstone
                         entries.add(ModItems.FROSTED_GLOWSTONE_DUST);
                         entries.add(ModBlocks.FROSTED_GLOWSTONE);
-
-                        entries.add(ModBlocks.ICECUTTER);
 
                     }).build());
 

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.util.Identifier;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
 
@@ -15,6 +16,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMALL_ICE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LARGE_ICE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_ICE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FROSTED_GLOWSTONE);
     }
 

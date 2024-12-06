@@ -12,16 +12,12 @@ import net.theblindbandit6.seasonaladditions.block.ModBlocks;
 import net.theblindbandit6.seasonaladditions.item.ModItemGroups;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
 import net.theblindbandit6.seasonaladditions.potion.ModPotions;
-import net.theblindbandit6.seasonaladditions.recipe.IcecuttingRecipe;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SeasonalAdditions implements ModInitializer {
 	public static final String MOD_ID = "seasonaladditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
-
-	public static final RecipeType<IcecuttingRecipe> ICECUTTING = RecipeType.register(SeasonalAdditions.MOD_ID + "icecutting");
 
 	@Override
 	public void onInitialize() {
@@ -37,5 +33,7 @@ public class SeasonalAdditions implements ModInitializer {
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.FROSTED_GLOWSTONE_DUST, ModPotions.FROSTED_POTION);
 		});
+
+
 	}
 }
