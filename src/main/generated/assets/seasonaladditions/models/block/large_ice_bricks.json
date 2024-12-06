@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "seasonaladditions:block/large_ice_bricks"
+  }
+}
