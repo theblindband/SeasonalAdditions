@@ -21,6 +21,6 @@ public class ModPotions {
     }
 
     public static void registerPotions() {
-        SeasonalAdditions.LOGGER.info("Registering Mod Potions for " + SeasonalAdditions.MOD_ID);
+
     }
 }

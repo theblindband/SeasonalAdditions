@@ -69,10 +69,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GREEN_FAIRY_LIGHTS);
                         entries.add(ModBlocks.WHITE_FAIRY_LIGHTS);
                         entries.add(ModBlocks.FESTIVE_FAIRY_LIGHTS);
-
                     }).build());
 
     public static void registerItemGroups() {
-        SeasonalAdditions.LOGGER.info("Registering Item Groups for " + SeasonalAdditions.MOD_ID);
+
     }
 }

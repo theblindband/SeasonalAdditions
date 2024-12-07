@@ -52,9 +52,9 @@ public class ModModelProvider extends FabricModelProvider {
         //Peppermint
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.PEPPERMINT_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 PeppermintBushBlock.AGE, 0, 1, 2, 3);
-
-        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GREEN_FAIRY_LIGHTS);
+        //Fairy Lights
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.RED_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GREEN_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.WHITE_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.FESTIVE_FAIRY_LIGHTS);
 
@@ -62,7 +62,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        //Frosted Glowstone
+        //Frosted Glowstone Dust
         itemModelGenerator.register(ModItems.FROSTED_GLOWSTONE_DUST, Models.GENERATED);
         //Candy Cane
         itemModelGenerator.register(ModItems.CANDY_CANE, Models.GENERATED);

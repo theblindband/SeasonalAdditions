@@ -3,13 +3,12 @@
 	"id": "seasonaladditions",
 	"version": "${version}",
 	"name": "Seasonal Additions",
-	"description": "Some seasonal additions for your Minecraft world.",
+	"description": "New features themed around different times of the year.",
 	"authors": [
 		"TheBlindBandit6"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/theblindband/SeasonalAdditions"
 	},
 	"license": "MIT",
 	"icon": "assets/seasonaladditions/icon.png",

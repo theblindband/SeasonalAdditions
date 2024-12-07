@@ -82,7 +82,7 @@ public class ModBlocks {
             Identifier.of(SeasonalAdditions.MOD_ID, "chiseled_ice_bricks"))).mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.CHIME).strength(2.0F, 6.0F).sounds(BlockSoundGroup.GLASS).requiresTool().slipperiness(0.98F)));
     //Frosted Glowstone
     public static final Block FROSTED_GLOWSTONE = registerBlock("frosted_glowstone", new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
-            Identifier.of(SeasonalAdditions.MOD_ID, "frosted_glowstone"))).mapColor(MapColor.LIGHT_BLUE_GRAY).instrument(NoteBlockInstrument.PLING).strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance(state -> 15).solidBlock(Blocks::never).slipperiness(0.98F)));
+            Identifier.of(SeasonalAdditions.MOD_ID, "frosted_glowstone"))).mapColor(MapColor.LIGHT_BLUE_GRAY).instrument(NoteBlockInstrument.PLING).strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).solidBlock(Blocks::never).slipperiness(0.98F)));
     //Candy Cane Blocks
     public static final Block RED_CANDY_CANE_BLOCK = registerBlock("red_candy_cane_block", new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "red_candy_cane_block"))).mapColor(MapColor.WHITE).instrument(NoteBlockInstrument.XYLOPHONE).requiresTool().strength(2.0F).sounds(BlockSoundGroup.BONE)));
@@ -100,17 +100,16 @@ public class ModBlocks {
     public static final Block PEPPERMINT_BUSH = registerBlockWithoutBlockItem("peppermint_bush", new PeppermintBushBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "peppermint_bush"))).mapColor(MapColor.DARK_GREEN).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
     //Fairy Lights
-    public static final Block GREEN_FAIRY_LIGHTS = registerBlock("green_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
-            Identifier.of(SeasonalAdditions.MOD_ID, "green_fairy_lights"))).luminance(state -> 10).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block RED_FAIRY_LIGHTS = registerBlock("red_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "red_fairy_lights"))).luminance(state -> 10).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block GREEN_FAIRY_LIGHTS = registerBlock("green_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(SeasonalAdditions.MOD_ID, "green_fairy_lights"))).luminance(state -> 10).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block WHITE_FAIRY_LIGHTS = registerBlock("white_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "white_fairy_lights"))).luminance(state -> 10).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block FESTIVE_FAIRY_LIGHTS = registerBlock("festive_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "festive_fairy_lights"))).luminance(state -> 10).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 
     //Additional Winter themed blocks:
-    //Fairy Lights
     //Baubles
     //Snowglobe
     //Presents

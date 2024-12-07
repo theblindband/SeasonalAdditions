@@ -16,6 +16,10 @@
   "block.seasonaladditions.blue_ice_stairs": "Blue Ice Stairs",
   "block.seasonaladditions.blue_ice_wall": "Blue Ice Wall",
 
+  "block.seasonaladditions.snow_slab": "Snow Slab",
+  "block.seasonaladditions.snow_stairs": "Snow Stairs",
+  "block.seasonaladditions.snow_wall": "Snow Wall",
+
   "block.seasonaladditions.small_ice_bricks": "Small Ice Bricks",
   "block.seasonaladditions.small_ice_bricks_slab": "Small Ice Bricks Slab",
   "block.seasonaladditions.small_ice_bricks_stairs": "Small Ice Bricks Stairs",
@@ -50,8 +54,8 @@
 
   "item.seasonaladditions.peppermint": "Peppermint",
 
-  "block.seasonaladditions.green_fairy_lights": "Green Fairy Lights",
   "block.seasonaladditions.red_fairy_lights": "Red Fairy Lights",
+  "block.seasonaladditions.green_fairy_lights": "Green Fairy Lights",
   "block.seasonaladditions.white_fairy_lights": "White Fairy Lights",
   "block.seasonaladditions.festive_fairy_lights": "Festive Fairy Lights"
 }

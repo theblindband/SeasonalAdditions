@@ -77,7 +77,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GREEN_CANDY_CANE_BLOCK);
         addDrop(ModBlocks.GREEN_CANDY_CANE_SLAB, block -> this.slabDrops(block));
         addDrop(ModBlocks.GREEN_CANDY_CANE_STAIRS);
-
+        //Peppermint
         this.addDrop(ModBlocks.PEPPERMINT_BUSH,
                 block -> this.applyExplosionDecay(
                         block, LootTable.builder().pool(LootPool.builder().conditionally(
@@ -91,7 +91,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 ).with(ItemEntry.builder(ModItems.PEPPERMINT))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
-
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

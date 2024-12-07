@@ -1,6 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:packed_ice",
+  "ingredient": "minecraft:ice",
   "result": {
     "count": 1,
     "id": "seasonaladditions:large_ice_bricks"
