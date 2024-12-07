@@ -3,6 +3,8 @@ package net.theblindbandit6.seasonaladditions.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
+import net.theblindbandit6.seasonaladditions.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -13,7 +15,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        //getOrCreateTagBuilder(ItemTags.BREWING_FUEL)
-        //        .add(ModItems.FROSTED_GLOWSTONE_DUST);
+        getOrCreateTagBuilder(ItemTags.PARROT_POISONOUS_FOOD)
+                .add(ModItems.CANDY_CANE);
     }
 }

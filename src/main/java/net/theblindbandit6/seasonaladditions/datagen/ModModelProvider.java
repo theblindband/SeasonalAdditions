@@ -8,6 +8,7 @@ import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
 import net.minecraft.util.Identifier;
+import net.theblindbandit6.seasonaladditions.block.custom.PeppermintBushBlock;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
 
@@ -18,25 +19,61 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        //Ice
+        generateSlabStairWall(blockStateModelGenerator, Blocks.ICE,
+                ModBlocks.ICE_SLAB,ModBlocks.ICE_STAIRS,ModBlocks.ICE_WALL);
+        //Packed Ice
+        generateSlabStairWall(blockStateModelGenerator, Blocks.PACKED_ICE,
+                ModBlocks.PACKED_ICE_SLAB,ModBlocks.PACKED_ICE_STAIRS,ModBlocks.PACKED_ICE_WALL);
+        //Blue Ice
+        generateSlabStairWall(blockStateModelGenerator, Blocks.BLUE_ICE,
+                ModBlocks.BLUE_ICE_SLAB,ModBlocks.BLUE_ICE_STAIRS,ModBlocks.BLUE_ICE_WALL);
+        //Snow
+        generateSlabStairWall(blockStateModelGenerator, Blocks.SNOW_BLOCK,
+                ModBlocks.SNOW_SLAB,ModBlocks.SNOW_STAIRS,ModBlocks.SNOW_WALL);
         //Small Ice Bricks
-        generateStoneSet(blockStateModelGenerator, ModBlocks.SMALL_ICE_BRICKS,
+        generateSlabStairWall(blockStateModelGenerator, ModBlocks.SMALL_ICE_BRICKS,
                 ModBlocks.SMALL_ICE_BRICKS_SLAB,ModBlocks.SMALL_ICE_BRICKS_STAIRS,ModBlocks.SMALL_ICE_BRICKS_WALL);
         //Large Ice Bricks
-        generateStoneSet(blockStateModelGenerator, ModBlocks.LARGE_ICE_BRICKS,
+        generateSlabStairWall(blockStateModelGenerator, ModBlocks.LARGE_ICE_BRICKS,
                 ModBlocks.LARGE_ICE_BRICKS_SLAB,ModBlocks.LARGE_ICE_BRICKS_STAIRS,ModBlocks.LARGE_ICE_BRICKS_WALL);
         //Polished Ice
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_ICE);
+        generateSlabStairWall(blockStateModelGenerator, ModBlocks.POLISHED_ICE,
+                ModBlocks.POLISHED_ICE_SLAB,ModBlocks.POLISHED_ICE_STAIRS,ModBlocks.POLISHED_ICE_WALL);
+        //Chiseled Ice Bricks
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_ICE_BRICKS);
         //Frosted Glowstone
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FROSTED_GLOWSTONE);
+        //Candy Cane Blocks
+        generateSlabStair(blockStateModelGenerator, ModBlocks.RED_CANDY_CANE_BLOCK,
+                ModBlocks.RED_CANDY_CANE_SLAB,ModBlocks.RED_CANDY_CANE_STAIRS);
+        generateSlabStair(blockStateModelGenerator, ModBlocks.GREEN_CANDY_CANE_BLOCK,
+                ModBlocks.GREEN_CANDY_CANE_SLAB,ModBlocks.GREEN_CANDY_CANE_STAIRS);
+        //Peppermint
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.PEPPERMINT_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
+                PeppermintBushBlock.AGE, 0, 1, 2, 3);
+
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GREEN_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.RED_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.WHITE_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.FESTIVE_FAIRY_LIGHTS);
+
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         //Frosted Glowstone
         itemModelGenerator.register(ModItems.FROSTED_GLOWSTONE_DUST, Models.GENERATED);
+        //Candy Cane
+        itemModelGenerator.register(ModItems.CANDY_CANE, Models.GENERATED);
     }
 
-    public void generateStoneSet(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs, Block wall){
+    public void generateSlabStair(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs){
+        BlockStateModelGenerator.BlockTexturePool blockTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(base);
+        blockTexturePool.slab(slab);
+        blockTexturePool.stairs(stairs);
+    }
+    public void generateSlabStairWall(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs, Block wall){
         BlockStateModelGenerator.BlockTexturePool blockTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(base);
         blockTexturePool.slab(slab);
         blockTexturePool.stairs(stairs);

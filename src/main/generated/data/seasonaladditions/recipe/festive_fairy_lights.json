@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "fairy_lights",
+  "key": {
+    "G": "minecraft:glowstone_dust",
+    "R": "minecraft:white_dye",
+    "T": "minecraft:red_dye",
+    "X": "minecraft:redstone",
+    "Y": "minecraft:lime_dye"
+  },
+  "pattern": [
+    "XXX",
+    "GGG",
+    "RTY"
+  ],
+  "result": {
+    "count": 16,
+    "id": "seasonaladditions:festive_fairy_lights"
+  }
+}

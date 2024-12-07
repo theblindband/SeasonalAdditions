@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "seasonaladditions:block/red_fairy_lights"
+  }
+}

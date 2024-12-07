@@ -1,6 +1,13 @@
 {
   "values": [
+    "seasonaladditions:ice_slab",
+    "seasonaladditions:packed_ice_slab",
+    "seasonaladditions:blue_ice_slab",
+    "seasonaladditions:snow_slab",
     "seasonaladditions:small_ice_bricks_slab",
-    "seasonaladditions:large_ice_bricks_slab"
+    "seasonaladditions:large_ice_bricks_slab",
+    "seasonaladditions:polished_ice_slab",
+    "seasonaladditions:red_candy_cane_slab",
+    "seasonaladditions:green_candy_cane_slab"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "seasonaladditions:block/green_candy_cane_block",
+    "side": "seasonaladditions:block/green_candy_cane_block",
+    "top": "seasonaladditions:block/green_candy_cane_block"
+  }
+}

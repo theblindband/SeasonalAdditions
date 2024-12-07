@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "R": "minecraft:packed_ice",
+    "R": "minecraft:blue_ice",
     "S": "minecraft:stonecutter"
   },
   "pattern": [
-    " R ",
-    "RSR"
+    "R",
+    "S"
   ],
   "result": {
     "count": 1,

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "seasonaladditions:block/green_candy_cane_block",
+    "side": "seasonaladditions:block/green_candy_cane_block",
+    "top": "seasonaladditions:block/green_candy_cane_block"
+  }
+}

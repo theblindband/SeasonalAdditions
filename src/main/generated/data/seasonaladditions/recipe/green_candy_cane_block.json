@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": "minecraft:lime_dye",
+    "R": "seasonaladditions:red_candy_cane_block"
+  },
+  "pattern": [
+    "RRR",
+    "RGR",
+    "RRR"
+  ],
+  "result": {
+    "count": 8,
+    "id": "seasonaladditions:green_candy_cane_block"
+  }
+}

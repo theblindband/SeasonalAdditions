@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "seasonaladditions:block/red_candy_cane_slab"
+    },
+    "type=double": {
+      "model": "seasonaladditions:block/red_candy_cane_block"
+    },
+    "type=top": {
+      "model": "seasonaladditions:block/red_candy_cane_slab_top"
+    }
+  }
+}

@@ -1,6 +1,15 @@
 {
   "values": [
     "seasonaladditions:icecutter",
+    "seasonaladditions:ice_slab",
+    "seasonaladditions:ice_stairs",
+    "seasonaladditions:ice_wall",
+    "seasonaladditions:packed_ice_slab",
+    "seasonaladditions:packed_ice_stairs",
+    "seasonaladditions:packed_ice_wall",
+    "seasonaladditions:blue_ice_slab",
+    "seasonaladditions:blue_ice_stairs",
+    "seasonaladditions:blue_ice_wall",
     "seasonaladditions:small_ice_bricks",
     "seasonaladditions:small_ice_bricks_slab",
     "seasonaladditions:small_ice_bricks_stairs",
@@ -10,6 +19,16 @@
     "seasonaladditions:large_ice_bricks_stairs",
     "seasonaladditions:large_ice_bricks_wall",
     "seasonaladditions:polished_ice",
-    "seasonaladditions:frosted_glowstone"
+    "seasonaladditions:polished_ice_slab",
+    "seasonaladditions:polished_ice_stairs",
+    "seasonaladditions:polished_ice_wall",
+    "seasonaladditions:chiseled_ice_bricks",
+    "seasonaladditions:frosted_glowstone",
+    "seasonaladditions:red_candy_cane_block",
+    "seasonaladditions:red_candy_cane_slab",
+    "seasonaladditions:red_candy_cane_stairs",
+    "seasonaladditions:green_candy_cane_block",
+    "seasonaladditions:green_candy_cane_slab",
+    "seasonaladditions:green_candy_cane_stairs"
   ]
 }

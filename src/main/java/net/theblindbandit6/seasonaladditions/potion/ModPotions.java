@@ -1,6 +1,5 @@
 package net.theblindbandit6.seasonaladditions.potion;
 
-import net.minecraft.block.Portal;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.potion.Potion;

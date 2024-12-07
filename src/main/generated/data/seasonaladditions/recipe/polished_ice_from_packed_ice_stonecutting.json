@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": "minecraft:packed_ice",
   "result": {
-    "count": 4,
+    "count": 1,
     "id": "seasonaladditions:polished_ice"
   }
 }

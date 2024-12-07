@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "seasonaladditions:peppermint",
+    "minecraft:sugar",
+    "minecraft:red_dye",
+    "minecraft:resin_clump"
+  ],
+  "result": {
+    "count": 4,
+    "id": "seasonaladditions:candy_cane"
+  }
+}

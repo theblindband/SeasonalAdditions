@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "seasonaladditions:block/ice_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/ice"
+    },
+    "type=top": {
+      "model": "seasonaladditions:block/ice_slab_top"
+    }
+  }
+}

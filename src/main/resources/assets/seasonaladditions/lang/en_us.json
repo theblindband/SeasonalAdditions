@@ -4,6 +4,18 @@
   "block.seasonaladditions.icecutter": "Icecutter",
   "container.icecutter": "Icecutter",
 
+  "block.seasonaladditions.ice_slab": "Ice Slab",
+  "block.seasonaladditions.ice_stairs": "Ice Stairs",
+  "block.seasonaladditions.ice_wall": "Ice Wall",
+
+  "block.seasonaladditions.packed_ice_slab": "Packed Ice Slab",
+  "block.seasonaladditions.packed_ice_stairs": "Packed Ice Stairs",
+  "block.seasonaladditions.packed_ice_wall": "Packed Ice Wall",
+
+  "block.seasonaladditions.blue_ice_slab": "Blue Ice Slab",
+  "block.seasonaladditions.blue_ice_stairs": "Blue Ice Stairs",
+  "block.seasonaladditions.blue_ice_wall": "Blue Ice Wall",
+
   "block.seasonaladditions.small_ice_bricks": "Small Ice Bricks",
   "block.seasonaladditions.small_ice_bricks_slab": "Small Ice Bricks Slab",
   "block.seasonaladditions.small_ice_bricks_stairs": "Small Ice Bricks Stairs",
@@ -15,11 +27,31 @@
   "block.seasonaladditions.large_ice_bricks_wall": "Large Ice Bricks Wall",
 
   "block.seasonaladditions.polished_ice": "Polished Ice",
+  "block.seasonaladditions.polished_ice_slab": "Polished Ice Slab",
+  "block.seasonaladditions.polished_ice_stairs": "Polished Ice Stair",
+  "block.seasonaladditions.polished_ice_wall": "Polished Ice Wall",
+
+  "block.seasonaladditions.chiseled_ice_bricks": "Chiseled Ice Bricks",
 
   "block.seasonaladditions.frosted_glowstone": "Frosted Glowstone",
   "item.seasonaladditions.frosted_glowstone_dust": "Frosted Glowstone Dust",
 
   "item.minecraft.potion.effect.frosted_potion": "Frosted Potion",
   "item.minecraft.splash_potion.effect.frosted_potion": "Frosted Splash Potion",
-  "item.minecraft.lingering_potion.effect.frosted_potion": "Frosted Lingering Potion"
+  "item.minecraft.lingering_potion.effect.frosted_potion": "Frosted Lingering Potion",
+
+  "item.seasonaladditions.candy_cane": "Candy Cane",
+  "block.seasonaladditions.red_candy_cane_block": "Red Candy Cane Block",
+  "block.seasonaladditions.red_candy_cane_slab": "Red Candy Cane Slab",
+  "block.seasonaladditions.red_candy_cane_stairs": "Red Candy Cane Stairs",
+  "block.seasonaladditions.green_candy_cane_block": "Green Candy Cane Block",
+  "block.seasonaladditions.green_candy_cane_slab": "Green Candy Cane Slab",
+  "block.seasonaladditions.green_candy_cane_stairs": "Green Candy Cane Stairs",
+
+  "item.seasonaladditions.peppermint": "Peppermint",
+
+  "block.seasonaladditions.green_fairy_lights": "Green Fairy Lights",
+  "block.seasonaladditions.red_fairy_lights": "Red Fairy Lights",
+  "block.seasonaladditions.white_fairy_lights": "White Fairy Lights",
+  "block.seasonaladditions.festive_fairy_lights": "Festive Fairy Lights"
 }

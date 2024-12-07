@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "seasonaladditions:block/red_candy_cane_block"
+  }
+}
