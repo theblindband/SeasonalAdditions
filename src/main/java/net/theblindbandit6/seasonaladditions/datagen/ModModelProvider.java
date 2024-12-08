@@ -7,7 +7,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
-import net.minecraft.util.Identifier;
 import net.theblindbandit6.seasonaladditions.block.custom.PeppermintBushBlock;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;

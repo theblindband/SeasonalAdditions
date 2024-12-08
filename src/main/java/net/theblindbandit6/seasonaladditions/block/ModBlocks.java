@@ -109,15 +109,6 @@ public class ModBlocks {
     public static final Block FESTIVE_FAIRY_LIGHTS = registerBlock("festive_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "festive_fairy_lights"))).luminance(state -> 10).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 
-    //Additional Winter themed blocks:
-    //Baubles
-    //Snowglobe
-    //Presents
-    //Christmas Pudding
-    //Mistletoe
-    //Poinsettia
-    //Stocking
-
     //Block Register Methods
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

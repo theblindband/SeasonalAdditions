@@ -1,6 +1,5 @@
 package net.theblindbandit6.seasonaladditions.screen;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.CraftingResultInventory;

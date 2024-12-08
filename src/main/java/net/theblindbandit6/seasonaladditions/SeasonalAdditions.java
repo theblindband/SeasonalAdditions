@@ -1,13 +1,9 @@
 package net.theblindbandit6.seasonaladditions;
 
-import com.mojang.serialization.JsonOps;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
-import net.minecraft.recipe.RecipeType;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
 import net.theblindbandit6.seasonaladditions.item.ModItemGroups;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
