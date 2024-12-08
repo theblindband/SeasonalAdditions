@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "seasonaladditions:snow_wall"
+        "recipe": "minecraft:snow_wall_from_snow_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "seasonaladditions:snow_wall"
+      "minecraft:snow_wall_from_snow_block_stonecutting"
     ]
   }
 }

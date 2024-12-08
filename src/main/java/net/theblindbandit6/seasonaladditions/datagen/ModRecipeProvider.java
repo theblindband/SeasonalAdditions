@@ -34,19 +34,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input('S', Blocks.STONECUTTER)
                     .criterion(hasItem(Blocks.BLUE_ICE), conditionsFromItem(Blocks.BLUE_ICE))
                     .offerTo(exporter);
-                //Snow
-                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_SLAB, Ingredient.ofItem(Blocks.SNOW_BLOCK))
-                        .criterion(hasItem(Blocks.SNOW_BLOCK), conditionsFromItem(Blocks.SNOW_BLOCK))
-                        .offerTo(exporter);
-                createStairsRecipe(ModBlocks.SNOW_STAIRS, Ingredient.ofItem(Blocks.SNOW_BLOCK))
-                        .criterion(hasItem(Blocks.SNOW_BLOCK), conditionsFromItem(Blocks.SNOW_BLOCK))
-                        .offerTo(exporter);
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_WALL, 6)
-                        .pattern("RRR")
-                        .pattern("RRR")
-                        .input('R', Blocks.SNOW_BLOCK)
-                        .criterion(hasItem(Blocks.SNOW_BLOCK), conditionsFromItem(Blocks.SNOW_BLOCK))
-                        .offerTo(exporter);
                 //Frosted Glowstone
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROSTED_GLOWSTONE)
                         .pattern("RR")
@@ -149,6 +136,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_ICE_SLAB, Blocks.BLUE_ICE, 2);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_ICE_STAIRS, Blocks.BLUE_ICE, 1);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_ICE_WALL, Blocks.BLUE_ICE, 1);
+                //Snow
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_SLAB, Blocks.SNOW_BLOCK, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_STAIRS, Blocks.SNOW_BLOCK, 1);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_WALL, Blocks.SNOW_BLOCK, 1);
                 //Small Ice Bricks
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS, Blocks.ICE, 1);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMALL_ICE_BRICKS_SLAB, Blocks.ICE, 2);
