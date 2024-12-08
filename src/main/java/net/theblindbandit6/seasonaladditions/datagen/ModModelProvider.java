@@ -4,9 +4,9 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
+import net.minecraft.client.data.*;
+import net.minecraft.client.texture.SpriteAtlasTexture;
+import net.minecraft.util.Identifier;
 import net.theblindbandit6.seasonaladditions.block.custom.PeppermintBushBlock;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
@@ -18,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        //Vanilla Textures
         //Ice
         generateSlabStairWall(blockStateModelGenerator, Blocks.ICE,
                 ModBlocks.ICE_SLAB,ModBlocks.ICE_STAIRS,ModBlocks.ICE_WALL);
@@ -30,6 +31,8 @@ public class ModModelProvider extends FabricModelProvider {
         //Snow
         generateSlabStairWall(blockStateModelGenerator, Blocks.SNOW_BLOCK,
                 ModBlocks.SNOW_SLAB,ModBlocks.SNOW_STAIRS,ModBlocks.SNOW_WALL);
+
+        //Modded Textures
         //Small Ice Bricks
         generateSlabStairWall(blockStateModelGenerator, ModBlocks.SMALL_ICE_BRICKS,
                 ModBlocks.SMALL_ICE_BRICKS_SLAB,ModBlocks.SMALL_ICE_BRICKS_STAIRS,ModBlocks.SMALL_ICE_BRICKS_WALL);
@@ -78,4 +81,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockTexturePool.stairs(stairs);
         blockTexturePool.wall(wall);
     }
+
+    //Will use this for generate models with vanilla blocks
+    public void generateSlabStairWallV(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs, Block wall){
+        BlockStateModelGenerator.BlockTexturePool blockTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(base);
+        blockTexturePool.slab(slab);
+        blockTexturePool.stairs(stairs);
+        blockTexturePool.wall(wall);
+    }
 }
+
