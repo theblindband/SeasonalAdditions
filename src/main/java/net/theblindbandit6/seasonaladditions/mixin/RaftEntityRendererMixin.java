@@ -24,8 +24,17 @@ public final class RaftEntityRendererMixin {
     @Inject(at = @At(value = "RETURN"), method = "getRenderLayer", cancellable = true)
     private void getRenderLayer(final CallbackInfoReturnable<RenderLayer> callbackInfoReturnable) {
         if(ChestBlockEntityRenderer.isAroundChristmas()) {
-            callbackInfoReturnable.setReturnValue(this.model.getLayer(SeasonalAdditions.identifier("christmas_textures/"+this.texture.getPath())));
+            String textureName = getTextureName(this.texture);
+            callbackInfoReturnable.setReturnValue(this.model.getLayer(SeasonalAdditions.identifier("textures/entity/chest_boat/christmas_"+textureName)));
         }
     }
 
+    public String getTextureName(Identifier texture) {
+        String path = texture.getPath();
+        int lastSlashIndex = path.lastIndexOf('/');
+        if (lastSlashIndex == -1) {
+            return path; // No slashes in the path, return the whole path
+        }
+        return path.substring(lastSlashIndex + 1); // Extract the file name
+    }
 }
