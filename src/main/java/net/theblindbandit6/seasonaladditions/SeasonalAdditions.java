@@ -26,7 +26,7 @@ public class SeasonalAdditions implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Initializing Seasonal Additions.");
 		Calendar calendar = Calendar.getInstance();
-		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 9){
+		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 25){
 			SeasonalAdditions.LOGGER.info("Merry Christmas!");
 		}if(calendar.get(2) + 1 == 12 && calendar.get(5) == 31){
 			SeasonalAdditions.LOGGER.info("Happy New Year!");

@@ -4,6 +4,12 @@ Currently this mod contains only Winter themed items, but it will be expanded up
 
 ## Winter
 The following additions are themed around Winter.
+
+### Christmas Chests
+Christmas Chests have been expanded to include all variants of chest each with their own unique style.
+All other chest instances have been edited too to now show up as Christmas variants during the season.
+Along with this, the timeframe to see these variants has been expanded too, it now covers the entirety of December.
+
 ### Ice and Snow Expansion
 New blocks made using ice and snow blocks have been added.\
 The ice variants act as stone blocks but with unique ice textures to fit into any ice palace build.\
