@@ -5,10 +5,10 @@
       {
         "model": {
           "type": "minecraft:special",
-          "base": "minecraft:item/chest",
+          "base": "minecraft:item/ender_chest",
           "model": {
             "type": "minecraft:chest",
-            "texture": "seasonaladditions:christmas_trapped"
+            "texture": "seasonaladditions:christmas_ender"
           }
         },
         "when": [
@@ -18,10 +18,10 @@
     ],
     "fallback": {
       "type": "minecraft:special",
-      "base": "minecraft:item/chest",
+      "base": "minecraft:item/ender_chest",
       "model": {
         "type": "minecraft:chest",
-        "texture": "minecraft:normal"
+        "texture": "minecraft:ender"
       }
     },
     "pattern": "MM",

@@ -3,8 +3,14 @@
 	"package": "net.theblindbandit6.seasonaladditions.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ChestBlockEntityRendererMixin",
-		"SpecialModelTypesMixin"
+		"ChestBlockEntityRendererMixin"
+	],
+	"client": [
+		"BoatEntityRendererMixin",
+		"DonkeyEntityRendererMixin",
+		"LlamaEntityRendererMixin",
+		"RaftEntityRendererMixin",
+		"TexturedRenderLayerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

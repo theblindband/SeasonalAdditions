@@ -18,13 +18,15 @@ public class SeasonalAdditions implements ModInitializer {
 	public static final String MOD_ID = "seasonaladditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Identifier TRAPPED_CHRISTMAS_ID = Identifier.ofVanilla("trapped_christmas");
+	public static Identifier identifier(final String resourceName) {
+		return Identifier.of(MOD_ID, resourceName);
+	}
 
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing Seasonal Additions.");
 		Calendar calendar = Calendar.getInstance();
-		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 25){
+		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 9){
 			SeasonalAdditions.LOGGER.info("Merry Christmas!");
 		}if(calendar.get(2) + 1 == 12 && calendar.get(5) == 31){
 			SeasonalAdditions.LOGGER.info("Happy New Year!");

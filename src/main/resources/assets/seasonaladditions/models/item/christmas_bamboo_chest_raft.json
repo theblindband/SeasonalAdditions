@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "seasonaladditions:item/christmas_bamboo_chest_raft"
+  }
+}

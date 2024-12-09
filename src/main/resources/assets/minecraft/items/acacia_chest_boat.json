@@ -1,0 +1,23 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "cases": [
+      {
+        "type": "minecraft:model",
+        "model": {
+          "type": "minecraft:model",
+          "model": "seasonaladditions:item/christmas_acacia_chest_boat"
+        },
+        "when": [
+          "12"
+        ]
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/acacia_chest_boat"
+    },
+    "pattern": "MM",
+    "property": "minecraft:local_time"
+  }
+}
