@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.potion.Potions;
+import net.minecraft.util.Identifier;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
 import net.theblindbandit6.seasonaladditions.item.ModItemGroups;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
@@ -16,6 +17,8 @@ import java.util.Calendar;
 public class SeasonalAdditions implements ModInitializer {
 	public static final String MOD_ID = "seasonaladditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	public static final Identifier TRAPPED_CHRISTMAS_ID = Identifier.ofVanilla("trapped_christmas");
 
 	@Override
 	public void onInitialize() {

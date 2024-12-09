@@ -1,7 +1,7 @@
 package net.theblindbandit6.seasonaladditions.mixin;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.client.render.block.entity.ChestBlockEntityRenderer;
-import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
