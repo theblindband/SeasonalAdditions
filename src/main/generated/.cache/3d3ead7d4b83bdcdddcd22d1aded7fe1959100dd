@@ -1,6 +1,8 @@
-// 1.21.4	2024-12-08T23:06:30.2353817	Seasonal Additions/Tags for minecraft:block
+// 1.21.4	2024-12-09T20:10:21.708521	Seasonal Additions/Tags for minecraft:block
 7fdc1926b7f059df7ca707968000207f4aa6873b data\minecraft\tags\block\mineable\shovel.json
+6c39aee1c75e06a16fe2624c6240cd7c6d492fd0 data\minecraft\tags\block\flower_pots.json
 aee83c5fa52b493c24925072bb4a33454f4f7b47 data\minecraft\tags\block\stairs.json
 d7e0e16e3a9680a2207dfc76753c76c43bb3c46c data\minecraft\tags\block\mineable\pickaxe.json
-f579736c51f6b450bd974457693d9164a3fce152 data\minecraft\tags\block\walls.json
+6c39aee1c75e06a16fe2624c6240cd7c6d492fd0 data\minecraft\tags\block\small_flowers.json
 ef2d9d12421f6fe9f7d08ce0dc8614f053299a7e data\minecraft\tags\block\slabs.json
+f579736c51f6b450bd974457693d9164a3fce152 data\minecraft\tags\block\walls.json

@@ -93,5 +93,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SMALL_ICE_BRICKS_WALL)
                 .add(ModBlocks.LARGE_ICE_BRICKS_WALL)
                 .add(ModBlocks.POLISHED_ICE_WALL);
+
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.POINSETTIA);
+
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POINSETTIA);
     }
 }

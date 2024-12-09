@@ -20,13 +20,14 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        //Generators that are commented out have been moved from the generated folder into the resources folder
         //Vanilla Textures
         //Ice
         generateSlabStairWall(blockStateModelGenerator, Blocks.ICE,
                 ModBlocks.ICE_SLAB,ModBlocks.ICE_STAIRS,ModBlocks.ICE_WALL);
         //Packed Ice
         generateSlabStairWall(blockStateModelGenerator, Blocks.PACKED_ICE,
-                ModBlocks.PACKED_ICE_SLAB,ModBlocks.PACKED_ICE_STAIRS,ModBlocks.PACKED_ICE_WALL);
+               ModBlocks.PACKED_ICE_SLAB,ModBlocks.PACKED_ICE_STAIRS,ModBlocks.PACKED_ICE_WALL);
         //Blue Ice
         generateSlabStairWall(blockStateModelGenerator, Blocks.BLUE_ICE,
                 ModBlocks.BLUE_ICE_SLAB,ModBlocks.BLUE_ICE_STAIRS,ModBlocks.BLUE_ICE_WALL);
@@ -61,6 +62,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GREEN_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.WHITE_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.FESTIVE_FAIRY_LIGHTS);
+        //Poinsettia
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.POINSETTIA, ModBlocks.POTTED_POINSETTIA, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
 
     @Override
@@ -77,12 +80,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockTexturePool.stairs(stairs);
     }
     public void generateSlabStairWall(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs, Block wall){
-        BlockStateModelGenerator.BlockTexturePool blockTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(base);
-        blockTexturePool.slab(slab);
-        blockTexturePool.stairs(stairs);
-        blockTexturePool.wall(wall);
-    }
-    public void generateSlabStairWallV(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs, Block wall){
         BlockStateModelGenerator.BlockTexturePool blockTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(base);
         blockTexturePool.slab(slab);
         blockTexturePool.stairs(stairs);

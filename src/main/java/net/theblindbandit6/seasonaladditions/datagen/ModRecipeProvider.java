@@ -121,6 +121,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('C', Items.COPPER_INGOT)
                         .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
                         .offerTo(exporter);
+                createShapeless(RecipeCategory.MISC,Items.RED_DYE)
+                        .input(ModBlocks.POINSETTIA)
+                        .criterion("has_poinsettia", this.conditionsFromItem(ModBlocks.POINSETTIA))
+                        .offerTo(this.exporter);
                 //Stonecutting
                 //Ice
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_SLAB, Blocks.ICE, 2);

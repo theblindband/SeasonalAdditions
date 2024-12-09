@@ -28,10 +28,12 @@ You craft these blocks by creating the new Candy Cane food item. This requires R
 ### Fairy Lights
 These are a new wall decoration and like Frosted Glowstone don't shine bright enough to melt ice and snow. They currently come in four variants red, green, white and a festive version that mixes those three colours.
 
+### Poinsettia
+A new flower that can be found in warm biomes. Perfect for festive decorating.
+
 ## To Do List
 
     Decorations
-        Poinsettia
         Baubles
         Snowglobe
         Mistletoe

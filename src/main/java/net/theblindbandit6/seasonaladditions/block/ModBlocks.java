@@ -4,6 +4,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -108,6 +109,11 @@ public class ModBlocks {
             Identifier.of(SeasonalAdditions.MOD_ID, "white_fairy_lights"))).luminance(state -> 8).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block FESTIVE_FAIRY_LIGHTS = registerBlock("festive_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "festive_fairy_lights"))).luminance(state -> 8).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    //Poinsettia
+    public static final Block POINSETTIA = registerBlock("poinsettia", new FlowerBlock(StatusEffects.GLOWING, 5.0F,AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(SeasonalAdditions.MOD_ID, "poinsettia"))).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_POINSETTIA = registerBlockWithoutBlockItem("potted_poinsettia", new FlowerPotBlock(POINSETTIA, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(SeasonalAdditions.MOD_ID, "potted_poinsettia"))).mapColor(MapColor.DARK_GREEN).breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 
     //Block Register Methods
     private static Block registerBlock(String name, Block block) {
