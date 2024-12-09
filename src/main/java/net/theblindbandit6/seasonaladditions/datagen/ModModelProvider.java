@@ -4,8 +4,10 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.enums.SlabType;
 import net.minecraft.client.data.*;
 import net.minecraft.client.texture.SpriteAtlasTexture;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.theblindbandit6.seasonaladditions.block.custom.PeppermintBushBlock;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
@@ -59,7 +61,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GREEN_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.WHITE_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.FESTIVE_FAIRY_LIGHTS);
-
     }
 
     @Override
@@ -81,8 +82,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockTexturePool.stairs(stairs);
         blockTexturePool.wall(wall);
     }
-
-    //Will use this for generate models with vanilla blocks
     public void generateSlabStairWallV(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs, Block wall){
         BlockStateModelGenerator.BlockTexturePool blockTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(base);
         blockTexturePool.slab(slab);

@@ -11,14 +11,24 @@ import net.theblindbandit6.seasonaladditions.potion.ModPotions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Calendar;
+
 public class SeasonalAdditions implements ModInitializer {
 	public static final String MOD_ID = "seasonaladditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
-
 		LOGGER.info("Initializing Seasonal Additions.");
+		Calendar calendar = Calendar.getInstance();
+		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 25){
+			SeasonalAdditions.LOGGER.info("Merry Christmas!");
+		}if(calendar.get(2) + 1 == 12 && calendar.get(5) == 31){
+			SeasonalAdditions.LOGGER.info("Happy New Year!");
+		}if(calendar.get(2) + 1 == 1 && calendar.get(5) == 1){
+			SeasonalAdditions.LOGGER.info("Happy New Year!");
+		}
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();

@@ -2,7 +2,8 @@
     "ambientocclusion": false,
     "textures": {
         "particle": "seasonaladditions:block/green_fairy_lights",
-        "fairy_lights": "seasonaladditions:block/green_fairy_lights"
+        "fairy_lights": "seasonaladditions:block/green_fairy_lights",
+        "overlay": "seasonaladditions:block/green_fairy_lights_e"
     },
     "elements": [
         {   "from": [ 0, 0, 0.1 ],
@@ -10,6 +11,14 @@
             "faces": {
                 "north": { "uv": [ 16, 0, 0, 16 ], "texture": "#fairy_lights" },
                 "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#fairy_lights" }
+            }
+        },
+        {   "from": [ 0, 0, 0.1 ],
+            "to": [ 16, 16, 0.1 ],
+            "light_emission": 15,
+            "faces": {
+                "north": { "uv": [ 16, 0, 0, 16 ], "texture": "#overlay" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay" }
             }
         }
     ]
