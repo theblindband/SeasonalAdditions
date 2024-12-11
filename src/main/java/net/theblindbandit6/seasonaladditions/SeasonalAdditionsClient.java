@@ -2,12 +2,16 @@ package net.theblindbandit6.seasonaladditions;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
+import net.theblindbandit6.seasonaladditions.screen.IcecutterScreen;
 
 public class SeasonalAdditionsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        HandledScreens.register(SeasonalAdditions.ICECUTTER_SCREEN_HANDLER, IcecutterScreen::new);
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ICECUTTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ICE_SLAB, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ICE_STAIRS, RenderLayer.getTranslucent());

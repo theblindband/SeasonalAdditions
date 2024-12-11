@@ -1,5 +1,6 @@
 package net.theblindbandit6.seasonaladditions.screen;
 
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.CraftingResultInventory;
@@ -8,15 +9,20 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeEntry;
-import net.minecraft.recipe.StonecuttingRecipe;
 import net.minecraft.recipe.display.CuttingRecipeDisplay;
 import net.minecraft.recipe.input.SingleStackRecipeInput;
 import net.minecraft.screen.*;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
+import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
+import net.theblindbandit6.seasonaladditions.interfaces.IcecutterRecipeGetter;
+import net.theblindbandit6.seasonaladditions.interfaces.ModRecipeManagerGetter;
+import net.theblindbandit6.seasonaladditions.recipe.IcecuttingRecipe;
+import net.theblindbandit6.seasonaladditions.recipe.display.IcecuttingRecipeDisplay;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +37,7 @@ public class IcecutterScreenHandler extends ScreenHandler {
     private final ScreenHandlerContext context;
     final Property selectedRecipe = Property.create();
     private final World world;
-    private CuttingRecipeDisplay.Grouping<StonecuttingRecipe> availableRecipes = CuttingRecipeDisplay.Grouping.empty();
+    private IcecuttingRecipeDisplay.Grouping availableRecipes = IcecuttingRecipeDisplay.Grouping.empty();
     private ItemStack inputStack = ItemStack.EMPTY;
     long lastTakeTime;
     final Slot inputSlot;
@@ -53,7 +59,7 @@ public class IcecutterScreenHandler extends ScreenHandler {
     }
 
     public IcecutterScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
-        super(ScreenHandlerType.STONECUTTER, syncId);
+        super(SeasonalAdditions.ICECUTTER_SCREEN_HANDLER, syncId);
         this.context = context;
         this.world = playerInventory.player.getWorld();
         this.inputSlot = this.addSlot(new Slot(this.input, 0, 20, 33));
@@ -94,7 +100,7 @@ public class IcecutterScreenHandler extends ScreenHandler {
         return this.selectedRecipe.get();
     }
 
-    public CuttingRecipeDisplay.Grouping<StonecuttingRecipe> getAvailableRecipes() {
+    public IcecuttingRecipeDisplay.Grouping getAvailableRecipes() {
         return this.availableRecipes;
     }
 
@@ -142,40 +148,56 @@ public class IcecutterScreenHandler extends ScreenHandler {
         this.selectedRecipe.set(-1);
         this.outputSlot.setStackNoCallbacks(ItemStack.EMPTY);
         if (!stack.isEmpty()) {
-            this.availableRecipes = this.world.getRecipeManager().getStonecutterRecipes().filter(stack);
+            if (this.world instanceof ServerWorld serverWorld) {
+                this.availableRecipes = ((IcecutterRecipeGetter) serverWorld.getRecipeManager()).seasonalAdditions$getIcecutterRecipes().filter(stack);
+            } else if (this.world instanceof ClientWorld clientWorld) {
+                this.availableRecipes = ((ModRecipeManagerGetter) clientWorld).seasonalAdditions$getModRecipeManager().getIcecutterRecipes().filter(stack);
+            }
         } else {
-            this.availableRecipes = CuttingRecipeDisplay.Grouping.empty();
+            this.availableRecipes = IcecuttingRecipeDisplay.Grouping.empty();
         }
     }
 
-    void populateResult(int selectedId) {
-        Optional<RecipeEntry<StonecuttingRecipe>> optional;
+    private void populateResult(int selectedId) {
+        Optional<RecipeEntry<IcecuttingRecipe>> optionalRecipe;
+
         if (!this.availableRecipes.isEmpty() && this.isInBounds(selectedId)) {
-            CuttingRecipeDisplay.GroupEntry<StonecuttingRecipe> groupEntry = (CuttingRecipeDisplay.GroupEntry<StonecuttingRecipe>)this.availableRecipes
-                    .entries()
-                    .get(selectedId);
-            optional = groupEntry.recipe().recipe();
+            IcecuttingRecipeDisplay.GroupEntry groupEntry = this.availableRecipes.entries().get(selectedId);
+            optionalRecipe = groupEntry.recipe().recipe();
+
         } else {
-            optional = Optional.empty();
+            optionalRecipe = Optional.empty();
         }
 
-        optional.ifPresentOrElse(
-                recipe -> {
-                    this.output.setLastRecipe(recipe);
-                    this.outputSlot
-                            .setStackNoCallbacks(((StonecuttingRecipe)recipe.value()).craft(new SingleStackRecipeInput(this.input.getStack(0)), this.world.getRegistryManager()));
+        optionalRecipe.ifPresentOrElse(
+                recipeEntry -> {
+                    IcecuttingRecipe icecuttingRecipe = recipeEntry.value();
+                    var inputCount = inputSlot.getStack().getCount();
+
+                    if (inputCount < icecuttingRecipe.inputCount()) {
+                        this.outputSlot.setStackNoCallbacks(ItemStack.EMPTY);
+                        this.output.setLastRecipe(null);
+                    } else {
+                        this.output.setLastRecipe(recipeEntry);
+                        this.outputSlot.setStackNoCallbacks(icecuttingRecipe.craft(createRecipeInput(), this.world.getRegistryManager()));
+                    }
                 },
                 () -> {
                     this.outputSlot.setStackNoCallbacks(ItemStack.EMPTY);
                     this.output.setLastRecipe(null);
                 }
         );
+
         this.sendContentUpdates();
+    }
+
+    private SingleStackRecipeInput createRecipeInput() {
+        return new SingleStackRecipeInput(this.input.getStack(0));
     }
 
     @Override
     public ScreenHandlerType<?> getType() {
-        return ScreenHandlerType.STONECUTTER;
+        return SeasonalAdditions.ICECUTTER_SCREEN_HANDLER;
     }
 
     public void setContentsChangedListener(Runnable contentsChangedListener) {
@@ -206,7 +228,7 @@ public class IcecutterScreenHandler extends ScreenHandler {
                 if (!this.insertItem(itemStack2, 2, 38, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (this.world.getRecipeManager().getStonecutterRecipes().contains(itemStack2)) {
+            } else if (isWoodcuttingRecipe(itemStack2)) {
                 if (!this.insertItem(itemStack2, 0, 1, false)) {
                     return ItemStack.EMPTY;
                 }
@@ -236,6 +258,13 @@ public class IcecutterScreenHandler extends ScreenHandler {
         }
 
         return itemStack;
+    }
+
+    private boolean isWoodcuttingRecipe(ItemStack itemStack2) {
+        return (this.world instanceof ServerWorld serverWorld &&
+                ((IcecutterRecipeGetter) serverWorld.getRecipeManager()).seasonalAdditions$getIcecutterRecipes().contains(itemStack2)) ||
+                (this.world instanceof ClientWorld clientWorld &&
+                        ((ModRecipeManagerGetter) clientWorld).seasonalAdditions$getModRecipeManager().getIcecutterRecipes().contains(itemStack2));
     }
 
     @Override

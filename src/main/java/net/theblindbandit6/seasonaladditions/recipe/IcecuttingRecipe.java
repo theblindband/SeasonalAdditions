@@ -12,24 +12,26 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class IcecuttingRecipe extends SingleStackRecipe {
-    public IcecuttingRecipe(String group, Ingredient ingredient, ItemStack result) {
-        super(group, ingredient, result);
+public class IcecuttingRecipe extends SingleStackWithCountRecipe {
+
+    public IcecuttingRecipe(String group, Ingredient ingredient, int inputCount, ItemStack result) {
+        super(group, ingredient, inputCount, result);
     }
 
     @Override
-    public @NotNull RecipeSerializer<IcecuttingRecipe> getSerializer() {
-        return ModRecipeSerializer.ICECUTTING.get();
+    public RecipeSerializer<IcecuttingRecipe> getSerializer() {
+        return ModRecipeSerializer.ICECUTTING;
     }
 
     @Override
-    public @NotNull RecipeType<IcecuttingRecipe> getType() {
-        return ModRecipeTypes.ICECUTTING.get();
+    public RecipeType<IcecuttingRecipe> getType() {
+        return ModRecipeTypes.ICECUTTING;
     }
 
     @Override
     public List<RecipeDisplay> getDisplays() {
-        return List.of(new IcecutterRecipeDisplay(this.ingredient().toDisplay(), this.createResultDisplay(), new SlotDisplay.ItemSlotDisplay(ModBlocks.ICECUTTER.asItem())));
+        return List.of(new IcecutterRecipeDisplay(this.ingredient().toDisplay(), this.createResultDisplay(),
+                new SlotDisplay.ItemSlotDisplay(ModBlocks.ICECUTTER.asItem())));
     }
 
     public SlotDisplay createResultDisplay() {
