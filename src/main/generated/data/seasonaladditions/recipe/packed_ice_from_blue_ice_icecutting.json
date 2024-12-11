@@ -1,0 +1,9 @@
+{
+  "type": "seasonaladditions:icecutting",
+  "ingredient": "minecraft:blue_ice",
+  "inputCount": 1,
+  "result": {
+    "count": 9,
+    "id": "minecraft:packed_ice"
+  }
+}

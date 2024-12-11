@@ -1,0 +1,9 @@
+{
+  "type": "seasonaladditions:icecutting",
+  "ingredient": "seasonaladditions:small_ice_bricks",
+  "inputCount": 1,
+  "result": {
+    "count": 1,
+    "id": "seasonaladditions:small_ice_bricks_stairs"
+  }
+}

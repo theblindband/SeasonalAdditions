@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:ice",
-  "result": {
-    "count": 1,
-    "id": "seasonaladditions:polished_ice_wall"
-  }
-}

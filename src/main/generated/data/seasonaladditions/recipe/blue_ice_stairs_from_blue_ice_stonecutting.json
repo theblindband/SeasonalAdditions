@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:blue_ice",
-  "result": {
-    "count": 1,
-    "id": "seasonaladditions:blue_ice_stairs"
-  }
-}

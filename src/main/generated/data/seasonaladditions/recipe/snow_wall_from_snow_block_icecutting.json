@@ -1,0 +1,9 @@
+{
+  "type": "seasonaladditions:icecutting",
+  "ingredient": "minecraft:snow_block",
+  "inputCount": 1,
+  "result": {
+    "count": 1,
+    "id": "seasonaladditions:snow_wall"
+  }
+}

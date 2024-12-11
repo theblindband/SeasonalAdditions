@@ -1,0 +1,9 @@
+{
+  "type": "seasonaladditions:icecutting",
+  "ingredient": "seasonaladditions:polished_ice",
+  "inputCount": 1,
+  "result": {
+    "count": 1,
+    "id": "seasonaladditions:polished_ice_wall"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "seasonaladditions:icecutting",
+  "ingredient": "minecraft:packed_ice",
+  "inputCount": 1,
+  "result": {
+    "count": 1,
+    "id": "seasonaladditions:packed_ice_stairs"
+  }
+}
