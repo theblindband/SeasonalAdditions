@@ -107,6 +107,10 @@ public class ModBlocks {
             Identifier.of(SeasonalAdditions.MOD_ID, "green_fairy_lights"))).luminance(state -> 8).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block WHITE_FAIRY_LIGHTS = registerBlock("white_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "white_fairy_lights"))).luminance(state -> 8).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block YELLOW_FAIRY_LIGHTS = registerBlock("yellow_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(SeasonalAdditions.MOD_ID, "yellow_fairy_lights"))).luminance(state -> 8).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block BLUE_FAIRY_LIGHTS = registerBlock("blue_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(SeasonalAdditions.MOD_ID, "blue_fairy_lights"))).luminance(state -> 8).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block FESTIVE_FAIRY_LIGHTS = registerBlock("festive_fairy_lights", new FairyLightsBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(SeasonalAdditions.MOD_ID, "festive_fairy_lights"))).luminance(state -> 8).noCollision().breakInstantly().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     //Poinsettia

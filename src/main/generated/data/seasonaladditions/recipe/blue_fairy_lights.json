@@ -5,7 +5,7 @@
   "key": {
     "C": "minecraft:copper_ingot",
     "G": "minecraft:glowstone_dust",
-    "R": "minecraft:green_dye",
+    "R": "minecraft:blue_dye",
     "X": "minecraft:redstone"
   },
   "pattern": [
@@ -15,6 +15,6 @@
   ],
   "result": {
     "count": 16,
-    "id": "seasonaladditions:green_fairy_lights"
+    "id": "seasonaladditions:blue_fairy_lights"
   }
 }

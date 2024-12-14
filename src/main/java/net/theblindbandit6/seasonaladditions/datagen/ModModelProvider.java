@@ -61,6 +61,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.RED_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GREEN_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.WHITE_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.YELLOW_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.BLUE_FAIRY_LIGHTS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.FESTIVE_FAIRY_LIGHTS);
         //Poinsettia
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.POINSETTIA, ModBlocks.POTTED_POINSETTIA, BlockStateModelGenerator.CrossType.NOT_TINTED);

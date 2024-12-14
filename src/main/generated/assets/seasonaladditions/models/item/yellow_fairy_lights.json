@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "seasonaladditions:block/green_fairy_lights"
+    "layer0": "seasonaladditions:block/yellow_fairy_lights"
   },
   "display": {
     "thirdperson_lefthand": {

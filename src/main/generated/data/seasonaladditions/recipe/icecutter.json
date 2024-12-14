@@ -3,11 +3,12 @@
   "category": "building",
   "key": {
     "R": "minecraft:blue_ice",
-    "S": "minecraft:stonecutter"
+    "S": "minecraft:iron_ingot",
+    "X": "minecraft:stone"
   },
   "pattern": [
-    "R",
-    "S"
+    " S ",
+    "XRX"
   ],
   "result": {
     "count": 1,

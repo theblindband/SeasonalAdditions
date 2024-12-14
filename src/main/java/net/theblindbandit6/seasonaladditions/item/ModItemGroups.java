@@ -68,6 +68,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_FAIRY_LIGHTS);
                         entries.add(ModBlocks.GREEN_FAIRY_LIGHTS);
                         entries.add(ModBlocks.WHITE_FAIRY_LIGHTS);
+                        entries.add(ModBlocks.YELLOW_FAIRY_LIGHTS);
+                        entries.add(ModBlocks.BLUE_FAIRY_LIGHTS);
                         entries.add(ModBlocks.FESTIVE_FAIRY_LIGHTS);
                         //Poinsettia
                         entries.add(ModBlocks.POINSETTIA);

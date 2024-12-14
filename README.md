@@ -26,7 +26,8 @@ A new block type added, Candy Cane blocks come in red and green and have stairs 
 You craft these blocks by creating the new Candy Cane food item. This requires Red Dye, Sugar and Resin Clumps and also the new Peppermint found from Peppermint Bushes in Snowy Plains.
 
 ### Fairy Lights
-These are a new wall decoration and like Frosted Glowstone don't shine bright enough to melt ice and snow. They currently come in four variants red, green, white and a festive version that mixes those three colours.
+These are a new wall decoration and like Frosted Glowstone don't shine bright enough to melt ice and snow.\
+They come in multiple colors for an array of decoration options.
 
 ### Poinsettia
 A new flower that can be found in warm biomes. Perfect for festive decorating.
@@ -34,7 +35,7 @@ A new flower that can be found in warm biomes. Perfect for festive decorating.
 ## To Do List
 
     Decorations
-        Baubles
+        Baubles - Use lantern?
         Snowglobe
         Mistletoe
         Stocking
@@ -48,3 +49,7 @@ A new flower that can be found in warm biomes. Perfect for festive decorating.
     Banner Patterns
         Snowflake
         Present
+    Frosted Redstone Lamp
+        On when not powered
+    
+    Advancements
