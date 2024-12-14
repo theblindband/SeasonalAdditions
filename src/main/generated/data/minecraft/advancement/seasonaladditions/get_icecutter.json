@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:seasonaladditions/root",
+  "criteria": {
+    "get_icecutter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "seasonaladditions:icecutter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.seasonaladditions.festive.getIcecutter.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "seasonaladditions:icecutter"
+    },
+    "title": {
+      "translate": "advancements.seasonaladditions.festive.getIcecutter.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_icecutter"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

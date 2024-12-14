@@ -1,5 +1,5 @@
 {
-  "itemgroup.winteradditions": "Seasonal Additions - Winter",
+  "itemgroup.winteradditions": "Seasonal Additions - Festive",
 
   "block.seasonaladditions.icecutter": "Icecutter",
   "container.icecutter": "Icecutter",
@@ -61,5 +61,16 @@
   "block.seasonaladditions.blue_fairy_lights": "Blue Fairy Lights",
   "block.seasonaladditions.festive_fairy_lights": "Festive Fairy Lights",
 
-  "block.seasonaladditions.poinsettia": "Poinsettia"
+  "block.seasonaladditions.poinsettia": "Poinsettia",
+
+  "advancements.seasonaladditions.festive.root.title": "Seasonal Additions - Festive",
+  "advancements.seasonaladditions.festive.root.description": "A wonderful snowy world.",
+  "advancements.seasonaladditions.festive.getcandycane.title": "Down the Barber Shop",
+  "advancements.seasonaladditions.festive.getcandycane.description": "Obtain a Candy Cane.",
+  "advancements.seasonaladditions.festive.getFairyLight.title": "Twinkle in the Night",
+  "advancements.seasonaladditions.festive.getFairyLight.description": "Obtain a Fairy Light.",
+  "advancements.seasonaladditions.festive.getAllFairyLight.title": "Sparkle and Shine",
+  "advancements.seasonaladditions.festive.getAllFairyLight.description": "Obtain every variant of Fairy Light.",
+  "advancements.seasonaladditions.festive.getIcecutter.title": "Sharp as Ice",
+  "advancements.seasonaladditions.festive.getIcecutter.description": "Obtain an Icecutter."
 }

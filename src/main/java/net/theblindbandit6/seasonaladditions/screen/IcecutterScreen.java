@@ -22,13 +22,13 @@ import static net.theblindbandit6.seasonaladditions.SeasonalAdditions.MOD_ID;
 
 @Environment(value = EnvType.CLIENT) //TODO: Whole class needs refactoring
 public class IcecutterScreen extends HandledScreen<IcecutterScreenHandler> {
-    private static final Identifier TEXTURE = Identifier.of(MOD_ID, "textures/gui/container/woodcutter.png");
-    private static final Identifier SCROLLER_TEXTURE = Identifier.of(MOD_ID, "container/woodcutter/scroller");
-    private static final Identifier SCROLLER_DISABLED_TEXTURE = Identifier.of(MOD_ID, "container/woodcutter/scroller_disabled");
-    private static final Identifier RECIPE_SELECTED_TEXTURE = Identifier.of(MOD_ID, "container/woodcutter/recipe_selected");
-    private static final Identifier RECIPE_HIGHLIGHTED_TEXTURE = Identifier.of(MOD_ID, "container/woodcutter/recipe_highlighted");
-    private static final Identifier RECIPE_DISABLED_TEXTURE = Identifier.of(MOD_ID, "container/woodcutter/recipe_disabled");
-    private static final Identifier RECIPE_TEXTURE = Identifier.of(MOD_ID, "container/woodcutter/recipe");
+    private static final Identifier TEXTURE = Identifier.of(MOD_ID, "textures/gui/container/icecutter.png");
+    private static final Identifier SCROLLER_TEXTURE = Identifier.of(MOD_ID, "container/icecutter/scroller");
+    private static final Identifier SCROLLER_DISABLED_TEXTURE = Identifier.of(MOD_ID, "container/icecutter/scroller_disabled");
+    private static final Identifier RECIPE_SELECTED_TEXTURE = Identifier.of(MOD_ID, "container/icecutter/recipe_selected");
+    private static final Identifier RECIPE_HIGHLIGHTED_TEXTURE = Identifier.of(MOD_ID, "container/icecutter/recipe_highlighted");
+    private static final Identifier RECIPE_DISABLED_TEXTURE = Identifier.of(MOD_ID, "container/icecutter/recipe_disabled");
+    private static final Identifier RECIPE_TEXTURE = Identifier.of(MOD_ID, "container/icecutter/recipe");
 
     private float scrollAmount;
     private boolean mouseClicked;
