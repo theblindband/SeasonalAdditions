@@ -63,6 +63,10 @@
 
   "block.seasonaladditions.poinsettia": "Poinsettia",
 
+
+  "item.seasonaladditions.present_banner_pattern": "Present Banner Pattern",
+  "block.seasonaladditions.banner.present": "Present",
+
   "advancements.seasonaladditions.festive.root.title": "Seasonal Additions - Festive",
   "advancements.seasonaladditions.festive.root.description": "A wonderful snowy world.",
   "advancements.seasonaladditions.festive.getcandycane.title": "Down the Barber Shop",

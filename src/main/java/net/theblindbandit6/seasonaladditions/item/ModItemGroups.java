@@ -73,6 +73,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FESTIVE_FAIRY_LIGHTS);
                         //Poinsettia
                         entries.add(ModBlocks.POINSETTIA);
+                        //Banner Patterns
+                        entries.add(ModItems.PRESENT_BANNER_PATTERN);
                     }).build());
 
     public static void registerItemGroups() {

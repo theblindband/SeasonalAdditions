@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:chest"
+  ],
+  "result": {
+    "count": 1,
+    "id": "seasonaladditions:present_banner_pattern"
+  }
+}

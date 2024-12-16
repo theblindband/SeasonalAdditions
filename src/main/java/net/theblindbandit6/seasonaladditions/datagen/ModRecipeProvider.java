@@ -147,7 +147,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModBlocks.POINSETTIA)
                         .criterion("has_poinsettia", this.conditionsFromItem(ModBlocks.POINSETTIA))
                         .offerTo(this.exporter);
-                //Stonecutting
+                //Banner Patterns
+                createShapeless(RecipeCategory.MISC,ModItems.PRESENT_BANNER_PATTERN)
+                        .input(Items.PAPER)
+                        .input(Blocks.CHEST)
+                        .criterion("has_chest", this.conditionsFromItem(Blocks.CHEST))
+                        .offerTo(this.exporter);
+
+                //Icecutting
                 //Ice
                 createIcecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_SLAB, Blocks.ICE, 2);
                 createIcecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_STAIRS, Blocks.ICE);

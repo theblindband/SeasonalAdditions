@@ -74,6 +74,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FROSTED_GLOWSTONE_DUST, Models.GENERATED);
         //Candy Cane
         itemModelGenerator.register(ModItems.CANDY_CANE, Models.GENERATED);
+        //Banner Patterns
+        itemModelGenerator.register(ModItems.PRESENT_BANNER_PATTERN, Models.GENERATED);
     }
 
     public void generateSlabStair(BlockStateModelGenerator blockStateModelGenerator, Block base, Block slab, Block stairs){

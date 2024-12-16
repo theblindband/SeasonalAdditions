@@ -35,7 +35,6 @@ A new flower that can be found in warm biomes. Perfect for festive decorating.
 ## To Do List
 
     Decorations
-        Baubles - Use lantern?
         Snowglobe
         Mistletoe
         Stocking
@@ -46,8 +45,5 @@ A new flower that can be found in warm biomes. Perfect for festive decorating.
     Festive Hats
         Santa
         Elf
-    Banner Patterns
-        Snowflake
-        Present
     Frosted Redstone Lamp
         On when not powered
