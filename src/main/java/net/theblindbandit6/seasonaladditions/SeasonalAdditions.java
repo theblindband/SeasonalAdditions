@@ -72,6 +72,7 @@ public class SeasonalAdditions implements ModInitializer {
 		return Registry.register(Registries.SCREEN_HANDLER, id, new ScreenHandlerType<>(factory, FeatureFlags.VANILLA_FEATURES));
 	}
 
+	/*
 	private static <T extends ScreenHandler, D extends ScreenHandler & PacketCodec<? super RegistryByteBuf, D>> ExtendedScreenHandlerType<T, D> registerExtendedScreenHandlerType(
 			String id,
 			ExtendedScreenHandlerType.ExtendedFactory<T, D> factory,
@@ -83,4 +84,5 @@ public class SeasonalAdditions implements ModInitializer {
 				new ExtendedScreenHandlerType<>(factory, data)
 		);
 	}
+	 */
 }
