@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "snow_walls",
+  "key": {
+    "R": "minecraft:snow_block"
+  },
+  "pattern": [
+    "RRR",
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "seasonaladditions:snow_wall"
+  }
+}

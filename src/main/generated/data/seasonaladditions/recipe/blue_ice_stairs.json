@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ice_stairs",
+  "key": {
+    "R": "minecraft:blue_ice"
+  },
+  "pattern": [
+    "R  ",
+    "RR ",
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "seasonaladditions:blue_ice_stairs"
+  }
+}

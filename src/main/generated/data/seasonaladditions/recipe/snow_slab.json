@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "snow_slabs",
+  "key": {
+    "R": "minecraft:snow_block"
+  },
+  "pattern": [
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "seasonaladditions:snow_slab"
+  }
+}

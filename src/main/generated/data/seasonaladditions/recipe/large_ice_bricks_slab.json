@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ice_slabs",
+  "key": {
+    "R": "seasonaladditions:large_ice_bricks"
+  },
+  "pattern": [
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "seasonaladditions:large_ice_bricks_slab"
+  }
+}

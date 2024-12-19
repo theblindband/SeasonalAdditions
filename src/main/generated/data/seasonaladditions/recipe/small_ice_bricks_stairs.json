@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ice_stairs",
+  "key": {
+    "R": "seasonaladditions:small_ice_bricks"
+  },
+  "pattern": [
+    "R  ",
+    "RR ",
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "seasonaladditions:small_ice_bricks_stairs"
+  }
+}

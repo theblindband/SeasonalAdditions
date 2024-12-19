@@ -1,5 +1,7 @@
 package net.theblindbandit6.seasonaladditions.mixin;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientCommonNetworkHandler;
 import net.minecraft.client.network.ClientConnectionState;
@@ -16,6 +18,7 @@ import net.theblindbandit6.seasonaladditions.recipe.display.IcecuttingRecipeDisp
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
+@Environment(EnvType.CLIENT)
 @Mixin(ClientPlayNetworkHandler.class)
 public abstract class ClientPlayNetworkHandlerMixin extends ClientCommonNetworkHandler implements ClientPlayPacketListener, ModClientPlayPacketListener, ModRecipeManagerGetter {
 
@@ -32,7 +35,7 @@ public abstract class ClientPlayNetworkHandlerMixin extends ClientCommonNetworkH
     }
 
     @Override
-    public void nemo_sWoodcutter$onSynchronizeModRecipes(SynchronizeModRecipesS2CPacket packet) {
+    public void seasonalAdditions$onSynchronizeModRecipes(SynchronizeModRecipesS2CPacket packet) {
         MinecraftClient client = ((MinecraftClientGetter)this).seasonalAdditions$getMinecraftClient();
         NetworkThreadUtils.forceMainThread(packet, this, client);
         this.modRecipeManager = new ClientModRecipeManager(packet.icecuttingRecipes());

@@ -3,6 +3,8 @@ package net.theblindbandit6.seasonaladditions;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -27,6 +29,7 @@ import java.util.Calendar;
 public class SeasonalAdditions implements ModInitializer {
 	public static final String MOD_ID = "seasonaladditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
 	public static final ScreenHandlerType<IcecutterScreenHandler> ICECUTTER_SCREEN_HANDLER =
 			SeasonalAdditions.registerScreenHandlerType(MOD_ID, IcecutterScreenHandler::new);
 

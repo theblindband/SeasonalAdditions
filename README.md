@@ -31,19 +31,3 @@ They come in multiple colors for an array of decoration options.
 
 ### Poinsettia
 A new flower that can be found in warm biomes. Perfect for festive decorating.
-
-## To Do List
-
-    Decorations
-        Snowglobe
-        Mistletoe
-        Stocking
-    Gingerbread Items
-        Ginger Plant
-        Gingerbread Food
-        Block Set
-    Festive Hats
-        Santa
-        Elf
-    Frosted Redstone Lamp
-        On when not powered

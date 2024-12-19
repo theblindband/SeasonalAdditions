@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ice_slabs",
+  "key": {
+    "R": "minecraft:blue_ice"
+  },
+  "pattern": [
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "seasonaladditions:blue_ice_slab"
+  }
+}

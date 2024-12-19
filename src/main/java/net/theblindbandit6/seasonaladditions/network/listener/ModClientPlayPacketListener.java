@@ -5,5 +5,5 @@ import net.theblindbandit6.seasonaladditions.network.packet.s2c.play.Synchronize
 
 public interface ModClientPlayPacketListener extends ClientPingResultPacketListener {
 
-    void nemo_sWoodcutter$onSynchronizeModRecipes(SynchronizeModRecipesS2CPacket packet);
+    void seasonalAdditions$onSynchronizeModRecipes(SynchronizeModRecipesS2CPacket packet);
 }

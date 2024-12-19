@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ice_walls",
+  "key": {
+    "R": "seasonaladditions:polished_ice"
+  },
+  "pattern": [
+    "RRR",
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "seasonaladditions:polished_ice_wall"
+  }
+}

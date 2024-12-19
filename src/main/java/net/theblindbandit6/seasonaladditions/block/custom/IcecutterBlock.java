@@ -46,19 +46,17 @@ public class IcecutterBlock extends Block {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (!world.isClient) {
-            player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
+        if (world.isClient) {
+            return ActionResult.SUCCESS;
         }
-
-        return ActionResult.SUCCESS;
+        player.openHandledScreen(createScreenHandlerFactory(world, pos));
+        return ActionResult.CONSUME;
     }
 
     @Nullable
-    @Override
-    protected NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-        return new SimpleNamedScreenHandlerFactory(
-                (syncId, playerInventory, player) -> new IcecutterScreenHandler(syncId, playerInventory, ScreenHandlerContext.create(world, pos)), TITLE
-        );
+    public NamedScreenHandlerFactory createScreenHandlerFactory(World world, BlockPos pos) {
+        return new SimpleNamedScreenHandlerFactory((syncId, playerInventory, player)
+                -> new IcecutterScreenHandler(syncId, playerInventory, ScreenHandlerContext.create(world, pos)), TITLE);
     }
 
     @Override

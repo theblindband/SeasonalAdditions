@@ -3,17 +3,19 @@
 	"package": "net.theblindbandit6.seasonaladditions.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ChestBlockEntityRendererMixin",
-		"ClientPlayPacketListenerMixin",
+		"ClientWorldMixin",
+		"ServerRecipeManagerMixin",
 		"PlayerManagerMixin",
 		"PlayStateFactoriesMixin",
-		"ServerRecipeManagerMixin"
+
+		"ChestBlockEntityRendererMixin"
 	],
 	"client": [
-		"BoatEntityRendererMixin",
 		"ClientCommonNetworkHandlerMixin",
 		"ClientPlayNetworkHandlerMixin",
-		"ClientWorldMixin",
+		"ClientPlayPacketListenerMixin",
+
+		"BoatEntityRendererMixin",
 		"DonkeyEntityRendererMixin",
 		"LlamaEntityRendererMixin",
 		"RaftEntityRendererMixin",

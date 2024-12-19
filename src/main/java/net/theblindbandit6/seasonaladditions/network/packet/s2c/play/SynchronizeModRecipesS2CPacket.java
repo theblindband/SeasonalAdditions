@@ -24,6 +24,6 @@ public record SynchronizeModRecipesS2CPacket(IcecuttingRecipeDisplay.Grouping ic
 
     @Override
     public void apply(ClientPlayPacketListener clientPlayPacketListener) {
-        ((ModClientPlayPacketListener) clientPlayPacketListener).nemo_sWoodcutter$onSynchronizeModRecipes(this);
+        ((ModClientPlayPacketListener) clientPlayPacketListener).seasonalAdditions$onSynchronizeModRecipes(this);
     }
 }
