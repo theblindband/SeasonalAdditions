@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.entity.BannerPattern;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BannerPatternTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.theblindbandit6.seasonaladditions.SeasonalAdditions;

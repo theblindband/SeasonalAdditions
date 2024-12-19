@@ -3,8 +3,9 @@ package net.theblindbandit6.seasonaladditions;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.network.PacketByteBuf;
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
+import net.minecraft.network.RegistryByteBuf;
+import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -41,11 +42,13 @@ public class SeasonalAdditions implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Initializing Seasonal Additions.");
 		Calendar calendar = Calendar.getInstance();
-		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 25){
+		if (calendar.get(2) + 1 == 12 && calendar.get(5) == 25) {
 			SeasonalAdditions.LOGGER.info("Merry Christmas!");
-		}if(calendar.get(2) + 1 == 12 && calendar.get(5) == 31){
+		}
+		if (calendar.get(2) + 1 == 12 && calendar.get(5) == 31) {
 			SeasonalAdditions.LOGGER.info("Happy New Year!");
-		}if(calendar.get(2) + 1 == 1 && calendar.get(5) == 1){
+		}
+		if (calendar.get(2) + 1 == 1 && calendar.get(5) == 1) {
 			SeasonalAdditions.LOGGER.info("Happy New Year!");
 		}
 
@@ -67,5 +70,17 @@ public class SeasonalAdditions implements ModInitializer {
 
 	private static <T extends ScreenHandler> ScreenHandlerType<T> registerScreenHandlerType(String id, ScreenHandlerType.Factory<T> factory) {
 		return Registry.register(Registries.SCREEN_HANDLER, id, new ScreenHandlerType<>(factory, FeatureFlags.VANILLA_FEATURES));
+	}
+
+	private static <T extends ScreenHandler, D extends ScreenHandler & PacketCodec<? super RegistryByteBuf, D>> ExtendedScreenHandlerType<T, D> registerExtendedScreenHandlerType(
+			String id,
+			ExtendedScreenHandlerType.ExtendedFactory<T, D> factory,
+			D data
+	) {
+		return Registry.register(
+				Registries.SCREEN_HANDLER,
+				Identifier.of(SeasonalAdditions.MOD_ID, id),
+				new ExtendedScreenHandlerType<>(factory, data)
+		);
 	}
 }

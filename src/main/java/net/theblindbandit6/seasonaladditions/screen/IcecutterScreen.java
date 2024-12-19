@@ -15,12 +15,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.context.ContextParameterMap;
 import net.minecraft.util.math.MathHelper;
-import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
 import net.theblindbandit6.seasonaladditions.recipe.display.IcecuttingRecipeDisplay;
 
 import static net.theblindbandit6.seasonaladditions.SeasonalAdditions.MOD_ID;
 
-@Environment(value = EnvType.CLIENT) //TODO: Whole class needs refactoring
+@Environment(value = EnvType.CLIENT)
 public class IcecutterScreen extends HandledScreen<IcecutterScreenHandler> {
     private static final Identifier TEXTURE = Identifier.of(MOD_ID, "textures/gui/container/icecutter.png");
     private static final Identifier SCROLLER_TEXTURE = Identifier.of(MOD_ID, "container/icecutter/scroller");
@@ -46,8 +45,6 @@ public class IcecutterScreen extends HandledScreen<IcecutterScreenHandler> {
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         super.render(context, mouseX, mouseY, delta);
         this.drawMouseoverTooltip(context, mouseX, mouseY);
-
-        //SeasonalAdditions.LOGGER.info(String.valueOf(TEXTURE));
     }
 
     @Override
@@ -124,7 +121,6 @@ public class IcecutterScreen extends HandledScreen<IcecutterScreenHandler> {
         }
     }
 
-    //TODO: Needs refactoring
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         this.mouseClicked = false;
