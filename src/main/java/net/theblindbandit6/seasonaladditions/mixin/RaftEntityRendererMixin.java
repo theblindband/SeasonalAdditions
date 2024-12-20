@@ -10,9 +10,12 @@ import net.theblindbandit6.seasonaladditions.SeasonalAdditions;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.Objects;
 
 @Mixin(RaftEntityRenderer.class)
 public final class RaftEntityRendererMixin {
@@ -24,8 +27,11 @@ public final class RaftEntityRendererMixin {
     @Inject(at = @At(value = "RETURN"), method = "getRenderLayer", cancellable = true)
     private void getRenderLayer(final CallbackInfoReturnable<RenderLayer> callbackInfoReturnable) {
         if(ChestBlockEntityRenderer.isAroundChristmas()) {
-            String textureName = getTextureName(this.texture);
-            callbackInfoReturnable.setReturnValue(this.model.getLayer(SeasonalAdditions.identifier("textures/entity/chest_boat/christmas_"+textureName)));
+            String chestBoat = getPenultimateEntry(this.texture);
+            if (Objects.equals(chestBoat, "chest_boat")) {
+                String textureName = getTextureName(this.texture);
+                callbackInfoReturnable.setReturnValue(this.model.getLayer(SeasonalAdditions.identifier("textures/entity/chest_boat/christmas_" + textureName)));
+            }
         }
     }
 
@@ -36,5 +42,15 @@ public final class RaftEntityRendererMixin {
             return path; // No slashes in the path, return the whole path
         }
         return path.substring(lastSlashIndex + 1); // Extract the file name
+    }
+
+    @Unique
+    public String getPenultimateEntry(Identifier texture) {
+        String path = texture.getPath();
+        String[] parts = path.split("/");
+        if (parts.length < 2) {
+            return path; // If there are less than 2 parts, return the whole path
+        }
+        return parts[parts.length - 2]; // Return the penultimate entry
     }
 }
