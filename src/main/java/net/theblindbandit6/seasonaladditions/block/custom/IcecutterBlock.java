@@ -8,7 +8,10 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
+import net.minecraft.screen.StonecutterScreenHandler;
+import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -20,28 +23,26 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.theblindbandit6.seasonaladditions.screen.IcecutterScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
 public class IcecutterBlock extends Block {
-    public static final MapCodec<net.theblindbandit6.seasonaladditions.block.custom.IcecutterBlock> CODEC = createCodec(net.theblindbandit6.seasonaladditions.block.custom.IcecutterBlock::new);
+    public static final MapCodec<StonecutterBlock> CODEC = StonecutterBlock.createCodec(StonecutterBlock::new);
     private static final Text TITLE = Text.translatable("container.icecutter");
-    public static final EnumProperty<Direction> FACING = HorizontalFacingBlock.FACING;
+    public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 9.0, 16.0);
 
-    @Override
-    public MapCodec<net.theblindbandit6.seasonaladditions.block.custom.IcecutterBlock> getCodec() {
+    public MapCodec<StonecutterBlock> getCodec() {
         return CODEC;
     }
 
     public IcecutterBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
+        this.setDefaultState((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        return (BlockState) this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
@@ -49,14 +50,15 @@ public class IcecutterBlock extends Block {
         if (world.isClient) {
             return ActionResult.SUCCESS;
         }
-        player.openHandledScreen(createScreenHandlerFactory(world, pos));
+        player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
+        player.incrementStat(Stats.INTERACT_WITH_STONECUTTER);
         return ActionResult.CONSUME;
     }
 
+    @Override
     @Nullable
-    public NamedScreenHandlerFactory createScreenHandlerFactory(World world, BlockPos pos) {
-        return new SimpleNamedScreenHandlerFactory((syncId, playerInventory, player)
-                -> new IcecutterScreenHandler(syncId, playerInventory, ScreenHandlerContext.create(world, pos)), TITLE);
+    protected NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
+        return new SimpleNamedScreenHandlerFactory((syncId, playerInventory, player) -> new StonecutterScreenHandler(syncId, playerInventory, ScreenHandlerContext.create(world, pos)), TITLE);
     }
 
     @Override
@@ -70,8 +72,13 @@ public class IcecutterBlock extends Block {
     }
 
     @Override
+    protected BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
+
+    @Override
     protected BlockState rotate(BlockState state, BlockRotation rotation) {
-        return state.with(FACING, rotation.rotate(state.get(FACING)));
+        return (BlockState) state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
     @Override
@@ -89,3 +96,4 @@ public class IcecutterBlock extends Block {
         return false;
     }
 }
+

@@ -3,12 +3,24 @@
   "category": "building",
   "group": "fairy_lights",
   "key": {
-    "C": "minecraft:copper_ingot",
-    "G": "minecraft:glowstone_dust",
-    "R": "minecraft:white_dye",
-    "T": "minecraft:red_dye",
-    "X": "minecraft:redstone",
-    "Y": "minecraft:lime_dye"
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "R": {
+      "item": "minecraft:white_dye"
+    },
+    "T": {
+      "item": "minecraft:red_dye"
+    },
+    "X": {
+      "item": "minecraft:redstone"
+    },
+    "Y": {
+      "item": "minecraft:lime_dye"
+    }
   },
   "pattern": [
     "XCX",

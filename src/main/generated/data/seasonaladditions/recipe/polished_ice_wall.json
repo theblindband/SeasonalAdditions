@@ -3,7 +3,9 @@
   "category": "building",
   "group": "ice_walls",
   "key": {
-    "R": "seasonaladditions:polished_ice"
+    "R": {
+      "item": "seasonaladditions:polished_ice"
+    }
   },
   "pattern": [
     "RRR",

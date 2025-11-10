@@ -2,10 +2,18 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "seasonaladditions:peppermint",
-    "minecraft:sugar",
-    "minecraft:red_dye",
-    "minecraft:resin_clump"
+    {
+      "item": "seasonaladditions:peppermint"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:white_dye"
+    }
   ],
   "result": {
     "count": 4,

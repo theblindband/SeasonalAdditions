@@ -3,7 +3,9 @@
   "category": "building",
   "group": "ice_stairs",
   "key": {
-    "R": "minecraft:packed_ice"
+    "R": {
+      "item": "minecraft:packed_ice"
+    }
   },
   "pattern": [
     "R  ",

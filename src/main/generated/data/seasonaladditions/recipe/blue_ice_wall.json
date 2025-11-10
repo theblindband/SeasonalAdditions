@@ -3,7 +3,9 @@
   "category": "building",
   "group": "ice_walls",
   "key": {
-    "R": "minecraft:blue_ice"
+    "R": {
+      "item": "minecraft:blue_ice"
+    }
   },
   "pattern": [
     "RRR",

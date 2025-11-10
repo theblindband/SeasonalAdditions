@@ -30,7 +30,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
+        //RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
 
         //Icecutter
         addDrop(ModBlocks.ICECUTTER);
@@ -68,7 +68,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         //Chiseled Ice Bricks
         addDrop(ModBlocks.CHISELED_ICE_BRICKS);
         //Frosted Glowstone
-        addDrop(ModBlocks.FROSTED_GLOWSTONE, multipleOreDrops(ModBlocks.FROSTED_GLOWSTONE, ModItems.FROSTED_GLOWSTONE_DUST, 1, 4));
+        //addDrop(ModBlocks.FROSTED_GLOWSTONE, multipleOreDrops(ModBlocks.FROSTED_GLOWSTONE, ModItems.FROSTED_GLOWSTONE_DUST, 1, 4));
         //Candy Cane Blocks
         addDrop(ModBlocks.RED_CANDY_CANE_BLOCK);
         addDrop(ModBlocks.RED_CANDY_CANE_SLAB, block -> this.slabDrops(block));
@@ -76,6 +76,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GREEN_CANDY_CANE_BLOCK);
         addDrop(ModBlocks.GREEN_CANDY_CANE_SLAB, block -> this.slabDrops(block));
         addDrop(ModBlocks.GREEN_CANDY_CANE_STAIRS);
+        /*
         //Peppermint
         this.addDrop(ModBlocks.PEPPERMINT_BUSH,
                 block -> this.applyExplosionDecay(
@@ -89,16 +90,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                         BlockStatePropertyLootCondition.builder(ModBlocks.PEPPERMINT_BUSH).properties(StatePredicate.Builder.create().exactMatch(PeppermintBushBlock.AGE, 2))
                                 ).with(ItemEntry.builder(ModItems.PEPPERMINT))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
-                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
-
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));*/
         addDrop(ModBlocks.POINSETTIA);
         addPottedPlantDrops(ModBlocks.POTTED_POINSETTIA);
     }
 
+    /*
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
         RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
-    }
+    }*/
 }

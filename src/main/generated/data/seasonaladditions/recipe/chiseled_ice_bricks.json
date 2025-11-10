@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "R": "seasonaladditions:polished_ice"
+    "R": {
+      "item": "seasonaladditions:polished_ice"
+    }
   },
   "pattern": [
     "RR",

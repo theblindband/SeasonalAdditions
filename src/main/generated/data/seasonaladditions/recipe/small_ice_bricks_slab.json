@@ -3,7 +3,9 @@
   "category": "building",
   "group": "ice_slabs",
   "key": {
-    "R": "seasonaladditions:small_ice_bricks"
+    "R": {
+      "item": "seasonaladditions:small_ice_bricks"
+    }
   },
   "pattern": [
     "RRR"

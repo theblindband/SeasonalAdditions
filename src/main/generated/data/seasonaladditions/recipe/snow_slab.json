@@ -3,7 +3,9 @@
   "category": "building",
   "group": "snow_slabs",
   "key": {
-    "R": "minecraft:snow_block"
+    "R": {
+      "item": "minecraft:snow_block"
+    }
   },
   "pattern": [
     "RRR"

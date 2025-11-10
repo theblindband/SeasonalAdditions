@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "seasonaladditions:poinsettia"
+    {
+      "item": "seasonaladditions:poinsettia"
+    }
   ],
   "result": {
     "count": 1,

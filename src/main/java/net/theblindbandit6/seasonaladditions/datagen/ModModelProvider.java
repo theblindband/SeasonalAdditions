@@ -1,10 +1,12 @@
 package net.theblindbandit6.seasonaladditions.datagen;
 
-import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.data.*;
+import net.minecraft.data.client.BlockStateModelGenerator;
+import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Models;
 import net.theblindbandit6.seasonaladditions.block.custom.PeppermintBushBlock;
 import net.theblindbandit6.seasonaladditions.item.ModItems;
 import net.theblindbandit6.seasonaladditions.block.ModBlocks;
@@ -50,18 +52,19 @@ public class ModModelProvider extends FabricModelProvider {
                 ModBlocks.RED_CANDY_CANE_SLAB,ModBlocks.RED_CANDY_CANE_STAIRS);
         generateSlabStair(blockStateModelGenerator, ModBlocks.GREEN_CANDY_CANE_BLOCK,
                 ModBlocks.GREEN_CANDY_CANE_SLAB,ModBlocks.GREEN_CANDY_CANE_STAIRS);
+
         //Peppermint
-        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.PEPPERMINT_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.PEPPERMINT_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED,
                 PeppermintBushBlock.AGE, 0, 1, 2, 3);
         //Fairy Lights
-        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.RED_FAIRY_LIGHTS);
-        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GREEN_FAIRY_LIGHTS);
-        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.WHITE_FAIRY_LIGHTS);
-        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.YELLOW_FAIRY_LIGHTS);
-        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.BLUE_FAIRY_LIGHTS);
-        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.FESTIVE_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.RED_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.GREEN_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.WHITE_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.YELLOW_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.BLUE_FAIRY_LIGHTS);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.FESTIVE_FAIRY_LIGHTS);
         //Poinsettia
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.POINSETTIA, ModBlocks.POTTED_POINSETTIA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.POINSETTIA, ModBlocks.POTTED_POINSETTIA, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

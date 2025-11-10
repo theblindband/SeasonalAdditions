@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "R": "minecraft:blue_ice",
-    "S": "minecraft:iron_ingot",
-    "X": "minecraft:stone"
+    "R": {
+      "item": "minecraft:blue_ice"
+    },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "minecraft:stone"
+    }
   },
   "pattern": [
     " S ",

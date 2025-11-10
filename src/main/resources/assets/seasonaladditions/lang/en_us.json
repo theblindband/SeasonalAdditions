@@ -52,7 +52,7 @@
   "block.seasonaladditions.green_candy_cane_slab": "Green Candy Cane Slab",
   "block.seasonaladditions.green_candy_cane_stairs": "Green Candy Cane Stairs",
 
-  "item.seasonaladditions.peppermint": "Peppermint",
+  "block.seasonaladditions.peppermint_bush": "Peppermint",
 
   "block.seasonaladditions.red_fairy_lights": "Red Fairy Lights",
   "block.seasonaladditions.green_fairy_lights": "Green Fairy Lights",
@@ -63,8 +63,8 @@
 
   "block.seasonaladditions.poinsettia": "Poinsettia",
 
-
-  "item.seasonaladditions.present_banner_pattern": "Present Banner Pattern",
+  "item.seasonaladditions.present_banner_pattern": "Banner Pattern",
+  "item.seasonaladditions.present_banner_pattern.desc": "Present",
   "block.seasonaladditions.banner.present": "Present",
 
   "advancements.seasonaladditions.festive.root.title": "Seasonal Additions - Festive",

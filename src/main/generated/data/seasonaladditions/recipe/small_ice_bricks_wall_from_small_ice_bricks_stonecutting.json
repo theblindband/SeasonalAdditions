@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "seasonaladditions:small_ice_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "seasonaladditions:small_ice_bricks_wall"
+  }
+}

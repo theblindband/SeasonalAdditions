@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "R": "seasonaladditions:frosted_glowstone_dust"
+    "R": {
+      "item": "seasonaladditions:frosted_glowstone_dust"
+    }
   },
   "pattern": [
     "RR",
