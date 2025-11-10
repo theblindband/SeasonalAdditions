@@ -19,8 +19,8 @@ public abstract class ChestBlockEntityRendererMixin {
     @Inject(method = "<init>", at = @At("RETURN"))
     private void onInit(BlockEntityRendererFactory.Context ctx, CallbackInfo ci) {
         Calendar calendar = Calendar.getInstance();
-        christmas = calendar.get(Calendar.MONTH) == Calendar.NOVEMBER
-                && calendar.get(Calendar.DAY_OF_MONTH) >= 10
+        boolean christmas = calendar.get(Calendar.MONTH) == Calendar.DECEMBER
+                && calendar.get(Calendar.DAY_OF_MONTH) >= 1
                 && calendar.get(Calendar.DAY_OF_MONTH) <= 26;
     }
 }

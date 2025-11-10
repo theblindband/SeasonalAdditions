@@ -5,7 +5,10 @@
 	"mixins": [
 	],
 	"client": [
+		"BoatEntityRendererMixin",
 		"ChestBlockEntityRendererMixin",
+		"DonkeyEntityRendererMixin",
+		"LlamaEntityRendererMixin",
 		"TexturedRenderLayerMixin"
 	],
 	"injectors": {

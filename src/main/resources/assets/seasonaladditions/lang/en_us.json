@@ -2,7 +2,7 @@
   "itemgroup.winteradditions": "Seasonal Additions - Festive",
 
   "block.seasonaladditions.icecutter": "Icecutter",
-  "container.icecutter": "Icecutter",
+  "container.seasonaladditions.icecutter": "Icecutter",
 
   "block.seasonaladditions.ice_slab": "Ice Slab",
   "block.seasonaladditions.ice_stairs": "Ice Stairs",

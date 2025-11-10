@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ice": {
+    "has_packed_ice": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:ice"
+            "items": "minecraft:packed_ice"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "seasonaladditions:polished_ice_stairs_from_ice_stonecutting"
+        "recipe": "seasonaladditions:small_ice_bricks_from_packed_ice_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ice"
+      "has_packed_ice"
     ]
   ],
   "rewards": {
     "recipes": [
-      "seasonaladditions:polished_ice_stairs_from_ice_stonecutting"
+      "seasonaladditions:small_ice_bricks_from_packed_ice_stonecutting"
     ]
   }
 }

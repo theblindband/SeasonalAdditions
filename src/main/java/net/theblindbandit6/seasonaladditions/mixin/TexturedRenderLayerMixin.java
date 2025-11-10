@@ -45,6 +45,7 @@ public class TexturedRenderLayerMixin{
     private static SpriteIdentifier createChestTextureId(String variant) {
         return new SpriteIdentifier(TexturedRenderLayers.CHEST_ATLAS_TEXTURE, SeasonalAdditions.identifier("entity/chest/" + variant));
     }
+
     @Unique
     private static SpriteIdentifier getChestTextureId(ChestType type, SpriteIdentifier single, SpriteIdentifier left, SpriteIdentifier right) {
         switch (type) {

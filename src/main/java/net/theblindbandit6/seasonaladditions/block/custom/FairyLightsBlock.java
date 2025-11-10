@@ -2,7 +2,6 @@ package net.theblindbandit6.seasonaladditions.block.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -14,7 +13,6 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -58,35 +56,6 @@ public class FairyLightsBlock extends Block{
         this.hasAllHorizontalDirections = Direction.Type.HORIZONTAL.stream().allMatch(this::canHaveDirection);
         this.canMirrorX = Direction.Type.HORIZONTAL.stream().filter(Direction.Axis.X).filter(this::canHaveDirection).count() % 2L == 0L;
         this.canMirrorZ = Direction.Type.HORIZONTAL.stream().filter(Direction.Axis.Z).filter(this::canHaveDirection).count() % 2L == 0L;
-    }
-
-    public static Set<Direction> collectDirections(BlockState state) {
-        if (!(state.getBlock() instanceof MultifaceGrowthBlock)) {
-            return Set.of();
-        }
-        EnumSet<Direction> set = EnumSet.noneOf(Direction.class);
-        for (Direction direction : Direction.values()) {
-            if (!MultifaceGrowthBlock.hasDirection(state, direction)) continue;
-            set.add(direction);
-        }
-        return set;
-    }
-
-    public static Set<Direction> flagToDirections(byte flag) {
-        EnumSet<Direction> set = EnumSet.noneOf(Direction.class);
-        for (Direction direction : Direction.values()) {
-            if ((flag & (byte)(1 << direction.ordinal())) <= 0) continue;
-            set.add(direction);
-        }
-        return set;
-    }
-
-    public static byte directionsToFlag(Collection<Direction> directions) {
-        byte b = 0;
-        for (Direction direction : directions) {
-            b = (byte)(b | 1 << direction.ordinal());
-        }
-        return b;
     }
 
     protected boolean canHaveDirection(Direction direction) {
@@ -190,15 +159,6 @@ public class FairyLightsBlock extends Block{
         return blockState;
     }
 
-    public static boolean hasDirection(BlockState state, Direction direction) {
-        BooleanProperty booleanProperty = MultifaceGrowthBlock.getProperty(direction);
-        return state.contains(booleanProperty) && state.get(booleanProperty) != false;
-    }
-
-    public static boolean canGrowOn(BlockView world, Direction direction, BlockPos pos, BlockState state) {
-        return Block.isFaceFullSquare(state.getSidesShape(world, pos), direction.getOpposite()) || Block.isFaceFullSquare(state.getCollisionShape(world, pos), direction.getOpposite());
-    }
-
     private boolean isWaterlogged() {
         return this.stateManager.getProperties().contains(Properties.WATERLOGGED);
     }
@@ -209,10 +169,6 @@ public class FairyLightsBlock extends Block{
             return blockState;
         }
         return Blocks.AIR.getDefaultState();
-    }
-
-    public static BooleanProperty getProperty(Direction direction) {
-        return FACING_PROPERTIES.get(direction);
     }
 
     private static BlockState withAllDirections(StateManager<Block, BlockState> stateManager) {

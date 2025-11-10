@@ -27,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class IcecutterBlock extends Block {
     public static final MapCodec<StonecutterBlock> CODEC = StonecutterBlock.createCodec(StonecutterBlock::new);
-    private static final Text TITLE = Text.translatable("container.icecutter");
+    private static final Text TITLE = Text.translatable("container.seasonaladditions.icecutter");
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 9.0, 16.0);
 
