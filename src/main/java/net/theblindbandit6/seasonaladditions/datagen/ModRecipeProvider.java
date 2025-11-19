@@ -44,7 +44,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("RRR")
                 .pattern("RGR")
                 .pattern("RRR")
-                .input('G', Blocks.PACKED_ICE)
+                .input('G', Blocks.ICE)
                 .input('R', Items.GLOWSTONE_DUST)
                 .criterion(hasItem(Blocks.PACKED_ICE), conditionsFromItem(Blocks.PACKED_ICE))
                 .offerTo(exporter);
@@ -101,7 +101,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //Crafting Recipes - Added since the icecutter doesn't work in a server currently
         createStairsSlabWallRecipes(exporter, Blocks.ICE, ModBlocks.ICE_STAIRS, ModBlocks.ICE_SLAB, ModBlocks.ICE_WALL, "ice");
-        createSmallSquare(exporter, ModBlocks.SMALL_ICE_BRICKS, Blocks.ICE);
+        createSmallSquare(exporter, ModBlocks.SMALL_ICE_BRICKS, Blocks.PACKED_ICE);
         createSmallSquare(exporter, ModBlocks.LARGE_ICE_BRICKS, ModBlocks.SMALL_ICE_BRICKS);
         createSmallSquare(exporter, ModBlocks.POLISHED_ICE, ModBlocks.LARGE_ICE_BRICKS);
         createSmallSquare(exporter, ModBlocks.CHISELED_ICE_BRICKS, ModBlocks.POLISHED_ICE);

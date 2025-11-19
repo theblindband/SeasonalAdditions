@@ -23,6 +23,9 @@ public class SeasonalAdditions implements ModInitializer {
 	public static final String MOD_ID = "seasonaladditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static final Integer CHRISTMAS_START = 1;
+	public static final Integer CHRISTMAS_END = 26;
+
 	public static Identifier identifier(final String resourceName) {
 		return Identifier.of(MOD_ID, resourceName);
 	}
@@ -55,18 +58,4 @@ public class SeasonalAdditions implements ModInitializer {
 	private static <T extends ScreenHandler> ScreenHandlerType<T> registerScreenHandlerType(String id, ScreenHandlerType.Factory<T> factory) {
 		return Registry.register(Registries.SCREEN_HANDLER, id, new ScreenHandlerType<>(factory, FeatureFlags.VANILLA_FEATURES));
 	}
-
-	/*
-	private static <T extends ScreenHandler, D extends ScreenHandler & PacketCodec<? super RegistryByteBuf, D>> ExtendedScreenHandlerType<T, D> registerExtendedScreenHandlerType(
-			String id,
-			ExtendedScreenHandlerType.ExtendedFactory<T, D> factory,
-			D data
-	) {
-		return Registry.register(
-				Registries.SCREEN_HANDLER,
-				Identifier.of(SeasonalAdditions.MOD_ID, id),
-				new ExtendedScreenHandlerType<>(factory, data)
-		);
-	}
-	 */
 }

@@ -10,6 +10,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Calendar;
 
+import static net.theblindbandit6.seasonaladditions.SeasonalAdditions.CHRISTMAS_END;
+import static net.theblindbandit6.seasonaladditions.SeasonalAdditions.CHRISTMAS_START;
+
 @Mixin(ChestBlockEntityRenderer.class)
 public abstract class ChestBlockEntityRendererMixin {
 
@@ -20,7 +23,7 @@ public abstract class ChestBlockEntityRendererMixin {
     private void onInit(BlockEntityRendererFactory.Context ctx, CallbackInfo ci) {
         Calendar calendar = Calendar.getInstance();
         boolean christmas = calendar.get(Calendar.MONTH) == Calendar.DECEMBER
-                && calendar.get(Calendar.DAY_OF_MONTH) >= 1
-                && calendar.get(Calendar.DAY_OF_MONTH) <= 26;
+                && calendar.get(Calendar.DAY_OF_MONTH) >= CHRISTMAS_START
+                && calendar.get(Calendar.DAY_OF_MONTH) <= CHRISTMAS_END;
     }
 }
